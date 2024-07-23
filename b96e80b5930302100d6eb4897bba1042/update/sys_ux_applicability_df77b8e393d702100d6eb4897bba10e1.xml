@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_applicability">
+    <sys_ux_applicability action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <api_name>x_908210_raposa_0.Audience for app raposa-carrossel</api_name>
+        <description/>
+        <name>Audience for app raposa-carrossel</name>
+        <role_names/>
+        <roles>35409839930302100d6eb4897bba1034,c26e80b5930302100d6eb4897bba1057,57a0dc75930302100d6eb4897bba10da,527054b5930302100d6eb4897bba109e,c66e80b5930302100d6eb4897bba105b,b161d0b9930302100d6eb4897bba1076,7961d0b9930302100d6eb4897bba1089</roles>
+        <sys_class_name>sys_ux_applicability</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-15 18:52:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>df77b8e393d702100d6eb4897bba10e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Audience for app raposa-carrossel</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_ux_applicability_df77b8e393d702100d6eb4897bba10e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-15 18:52:54</sys_updated_on>
+    </sys_ux_applicability>
+</record_update>

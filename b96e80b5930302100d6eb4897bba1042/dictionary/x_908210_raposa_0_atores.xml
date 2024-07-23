@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5c5258f9930302100d6eb4897bba1065" label="Atores" max_length="40" name="x_908210_raposa_0_atores" text_index="true" type="collection">
+        <element choice="1" display="true" label="Nome do Ator" max_length="40" name="nome_do_ator" type="string" use_dependent_field="true">
+            <choice/>
+        </element>
+        <element label="Filme" max_length="32" name="filme" reference="x_908210_raposa_0_filmes" type="glide_list"/>
+        <index name="index">
+            <element name="filme"/>
+        </index>
+    </element>
+</database>

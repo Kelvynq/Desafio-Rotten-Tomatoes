@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="INSERT_OR_UPDATE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-15 18:52:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>da7778e35ed702107ac20e8092056eaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>m2m_app_config_theme_da7778e35ed702107ac20e8092056eaa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-15 18:52:51</sys_updated_on>
+        <theme display_value="Base Agent Workspace theme">c012213bc39b10101d590cf06e40dd32</theme>
+        <ux_app_configuration display_value="Raposa Carrossel App Config">1e7778e396d70210b296c21b2db384ac</ux_app_configuration>
+    </m2m_app_config_theme>
+</record_update>

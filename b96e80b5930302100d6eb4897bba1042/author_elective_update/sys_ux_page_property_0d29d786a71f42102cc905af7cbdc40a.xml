@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="DELETE">
+        <choices/>
+        <description>sys_ux_applicability sys_id for Workspace audience</description>
+        <name>wbApplicabilityConfigId</name>
+        <page display_value="WS Raposa">cd29d7865e1f421026b22f620a273f19</page>
+        <required_translations/>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 14:48:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>0d29d786a71f42102cc905af7cbdc40a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>wbApplicabilityConfigId</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_ux_page_property_0d29d786a71f42102cc905af7cbdc40a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 14:48:22</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_908210_raposa_0.cd29d7865e1f421026b22f620a273f19.root.wbApplicabilityConfigId</unique_name>
+        <value>da291b86931f42100d6eb4897bba103d</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="DELETE" query="documentkey=0d29d786a71f42102cc905af7cbdc40a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sys_ux_page_property_0d29d786a71f42102cc905af7cbdc40a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property"><sys_ux_page_property action="INSERT_OR_UPDATE"><choices/><description>sys_ux_applicability sys_id for Workspace audience</description><name>wbApplicabilityConfigId</name><page display_value="WS Raposa">cd29d7865e1f421026b22f620a273f19</page><required_translations/><route/><suffix/><sys_class_name>sys_ux_page_property</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 14:48:19</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>global</sys_domain_path><sys_id>0d29d786a71f42102cc905af7cbdc40a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>wbApplicabilityConfigId</sys_name><sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sys_ux_page_property_0d29d786a71f42102cc905af7cbdc40a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 14:48:22</sys_updated_on><type>string</type><unique_name>x_908210_raposa_0.cd29d7865e1f421026b22f620a273f19.root.wbApplicabilityConfigId</unique_name><value>da291b86931f42100d6eb4897bba103d</value></sys_ux_page_property><sys_translated_text action="delete_multiple" query="documentkey=0d29d786a71f42102cc905af7cbdc40a"/></record_update>]]></payload>
+        <payload_hash>544022532</payload_hash>
+        <record_name>wbApplicabilityConfigId</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 14:48:22</sys_created_on>
+        <sys_id>1a291b86931f42100d6eb4897bba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190a2444a550000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 14:48:22</sys_updated_on>
+        <type>UX Page Property</type>
+        <update_guid>9e291b86861f4210d0afd93986deca51</update_guid>
+        <update_guid_history>9e291b86861f4210d0afd93986deca51:544022532,92291b86ac1f4210fb237c8526b24450:-1459294313</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 15:35:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_property">sys_ux_page_property</sys_db_object>
+        <sys_id>73eab37fa93148aa9af942ba547dc6c4</sys_id>
+        <sys_metadata>0d29d786a71f42102cc905af7cbdc40a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wbApplicabilityConfigId</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sys_ux_page_property_0d29d786a71f42102cc905af7cbdc40a</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_property_0d29d786a71f42102cc905af7cbdc40a">1a291b86931f42100d6eb4897bba1052</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 15:35:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

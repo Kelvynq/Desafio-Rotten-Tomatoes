@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($timeout, $scope, $element, spAriaUtil, i18n, $uibModal, $rootScope, $uibModalStack) {
+	var c = this;
+	c.newUpload = false;
+	c.customizeCropper = false;
+
+	$('.modal-footer,.modal-header').hide();
+	$('.modal-body').css('padding', '0');
+
+	$timeout(function() {
+		$('.ec-modal-close-btn').focus();
+	});
+
+	c.uploadNewImage = function($event) {
+		$event.stopPropagation();
+		$event.preventDefault();
+		var $el = $element.find('[id=upload-image]');
+		$el.click();
+	};
+
+	c.closeModal = function() {
+		$uibModalStack.dismissAll();
+	};
+
+	c.removeImage = function($event) {
+		$scope.modalInstance = $uibModal.open({
+			templateUrl: 'removeImage',
+			scope: $scope,
+			backdrop: "static",
+			size: "xs",
+			controller: function($scope, $uibModalInstance) {
+				$scope.deleteBanner = function() {
+					$uibModalInstance.close();
+					$rootScope.$broadcast(c.data.broadcastId, null);
+					$uibModalStack.dismissAll();
+				};
+				$scope.dismissModal = function() {
+					$uibModalInstance.close();
+				};
+			}
+		}).rendered.then(function () {
+			$uibModalStack.getTop().value.modalDomEl.attr('id', 'internal');
+		});
+	};
+
+	c.keyDownEvent = function($event) {
+		var tabbableElements = $('.ec-modal-container').find('button');
+		var focusChanged = false;
+		if($event.which == 9) {
+			if($event.shiftKey) {
+				if (c.isFocusInFirstItem($event, tabbableElements)){
+					focusChanged = c.focusLastFocusableElement(tabbableElements);
+				}
+			}
+			else {
+				if (c.isFocusInLastItem($event, tabbableElements)) {
+					focusChanged = c.focusFirstFocusableElement(tabbableElements);
+				}
+			}
+			if (focusChanged) {
+				$event.preventDefault();
+			}
+		}
+	};
+
+	c.isFocusInFirstItem = function(event, list) {
+		if (list.length > 0) {
+			return (event.target || event.srcElement) === list[0];
+		}
+		return false;
+	};
+
+	c.isFocusInLastItem = function(event, list) {
+		if (list.length > 0) {
+			if((event.target || event.srcElement) === list[list.length - 1]) 
+				return true;
+			else if( (list[list.length - 1].disabled === true) && 
+							((event.target || event.srcElement) === list[list.length - 2]) ) {
+				return true;
+			}
+		}
+		return false;
+	};
+
+	c.focusLastFocusableElement = function(list) {
+		if (list.length > 0) {
+			if(list[list.length - 1].disabled === true) {
+				list[list.length - 2].focus();
+			} else {
+				list[list.length - 1].focus();
+			}
+			return true;
+		}
+		return false;
+	};
+
+	c.focusFirstFocusableElement = function(list) {
+		if (list.length > 0) {
+			list[0].focus();
+			return true;
+		}
+		return false;
+	};
+
+	c.uploadImage = function($event) {
+		var canvas = c.cropper.getCroppedCanvas();
+		if (canvas.toBlob) {
+			canvas.toBlob(function (blob) {
+				blob.lastModifiedDate = new Date();
+              			blob.name = "newImage.png";
+				$rootScope.$broadcast(c.data.broadcastId, blob);
+				$uibModalStack.dismissAll();
+			}, 'image/png');
+		} 
+		else {
+			var binStr = atob(canvas.toDataURL('image/png', 1).split(',')[1]);
+			var len = binStr.length;
+			var arr = new Uint8Array(len);
+			for (var i = 0; i < len; i++)
+				arr[i] = binStr.charCodeAt(i);
+
+			var blob = new Blob([arr], { type:'image/png' });
+			blob.lastModifiedDate = new Date();
+          		blob.name = "newImage.png";
+			$rootScope.$broadcast(c.data.broadcastId, blob);
+			$uibModalStack.dismissAll();
+		}
+	};
+
+
+	c.attachFiles = function(files) {
+		if (!files.files.length) 
+			return;
+
+		var file = files.files[0];
+		var reader = new FileReader();
+		var preview = document.querySelector('.bg-img');
+		
+		var fileTypes = ["image/jpeg", "image/png", "image/bmp", "image/x-windows-bmp", "image/svg+xml"];
+
+		if (file && file.type) {
+			if (fileTypes.indexOf(file.type) > -1) {
+				reader.readAsDataURL(file);
+			} else {
+				alert(file.name + " " + i18n.getMessage("isn't a recognized image file format"));
+				return;
+			}
+		}
+		
+		reader.addEventListener("load", function() {
+			c.setupCropper('new', reader.result);
+		}, false);
+		
+		c.data.isImagePresent = true;
+		c.newUpload = true;
+		c.data.disableApplyButton = false;
+		setTabIndexForApplyButton('0');
+	};
+	
+	if(c.data.isImagePresent) {
+		c.data.disableApplyButton = true;
+		setTabIndexForApplyButton('-1');
+		$timeout(function() {
+			c.setupCropper('edit', c.data.imgSrc);
+		});
+	}
+
+	c.action = function (event) {
+		var cropped;
+		var data;
+		var e = event || window.event;
+		var target = e.target || e.srcElement;
+
+		if (!c.cropper) {
+			return;
+		}
+
+		data = {
+			method: target.getAttribute('data-method'),
+			option: target.getAttribute('data-option') || undefined,
+			secondOption: target.getAttribute('data-second-option') || undefined
+		};
+
+		cropped = c.cropper.cropped;
+
+		if (data.method) {
+			if(data.method === 'rotate') {
+				if (cropped) {
+					c.cropper.clear();
+				}
+			}
+			//Action
+			c.cropper[data.method](data.option, data.secondOption);
+			c.data.disableApplyButton = (data.method == 'reset' && !c.newUpload) ? true : false;
+			if(c.data.disableApplyButton) 
+				setTabIndexForApplyButton('-1');
+			else
+				setTabIndexForApplyButton('0');
+
+			switch (data.method) {
+				case 'rotate':
+					if (cropped)
+						c.cropper.crop();
+					break;
+				case 'scaleX':
+				case 'scaleY':
+					target.setAttribute('data-option', -data.option);
+					break;
+			}
+
+			if((data.method == 'reset' || data.method == 'rotate') &&
+				 !c.data.isCircularCrop && c.customizeCropper) {
+				$('.cropper-crop-box').css('transform', 'translateY(0)');
+			}
+		}
+	};
+	
+	c.setupCropper = function(mode, imgSrc) {
+		var image = document.getElementById('image');
+		image.src = imgSrc;
+		
+		var aspectRatio =  c.data.aspectRatio;
+		var dragMode = c.data.dragMode;
+		var cropBoxMovable = c.data.moveCropBox;
+		var cropBoxResizable = c.data.resizeCropBox;
+		var viewMode = c.data.viewMode;
+		var autoCropArea = c.data.autoCropArea;
+		
+		c.height = ($('.bg-img-container')[0].offsetWidth)/4;
+		$('.bg-img-container').css('height', c.height);
+		
+		if(c.height < 100) {
+			c.customizeCropper = true;
+		}
+		
+		var options = {
+			autoCropArea : autoCropArea,
+			aspectRatio: aspectRatio,
+			dragMode: dragMode,
+			viewMode: viewMode,
+			cropBoxMovable: cropBoxMovable,
+			cropBoxResizable: cropBoxResizable,
+			cropstart: function(event) {
+				c.data.disableApplyButton = false ;
+				setTabIndexForApplyButton('0');
+			},
+			ready: function () {
+				if(!c.data.isCircularCrop) {
+					$('.cropper-view-box, .cropper-face').css('border-radius', '0%');
+					$('.cropper-crop-box').css('max-width', '100%');
+					if(c.customizeCropper){
+						$('.cropper-container').css('height', c.height);
+						$('.cropper-crop-box').css('transform', 'translateY(0)');
+					}
+				}
+			}
+		};
+		
+		if (c.cropper && mode === 'new')
+			c.cropper.destroy();
+		c.cropper = new Cropper(image, options);
+	};
+	
+	function setTabIndexForApplyButton(value) {
+		$('.btn-apply').attr('tabindex',value);
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>$background-primary: #FFFFFF !default;
+$sp-panel-box-shadow: 0 4px 8px 0 rgba(23, 40, 52, 0.08) !default;
+$border-primary: #8790A1 !default;
+$border-secondary: #B3B7BC !default;
+$border-tertiary: #DADDE2 !default;
+$text-primary: #1D2223 !default;
+$color-sp-separator: #EAEAEA !default;
+$link-hover-color : #354ECA !default;
+$link-color : #3C59E7 !default;
+$sp-space--xxs: 2px !default;
+$rm: $sp-space--xxs;
+
+.ec-modal-container {
+  background: $background-primary;
+  box-shadow: $sp-panel-box-shadow;
+  border-radius: $border-radius-large;
+}
+
+.ec-modal-header {
+  padding: $rm * 8;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $color-sp-separator;
+}
+
+.ec-modal-title {
+  margin: 0;
+  font-size: $rm * 9;
+  display: flex;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.ec-modal-close-btn {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $rm * 8;
+}
+
+.ec-modal-welcome-body {
+  padding: $rm * 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid $color-sp-separator;
+}
+
+.ec-modal-crop-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-container {
+  max-width: 100%;
+  margin-top: $rm * 16;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.description {
+  font-size: $rm * 8;
+  font-weight: 600;
+  margin: 0;
+}
+
+.supported-format {
+  margin-top: $rm * 9;
+  font-size: $rm * 7;
+  font-weight: 400;
+}
+
+.icon {
+  color: $brand-primary;
+  font-size: $rm * 36;
+}
+
+.image-container {
+  margin: $rm * 8;
+}
+
+.ec-modal-welcome-footer {
+  padding: $rm * 8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bg-img-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  max-width:100%;
+  position: relative;
+}
+
+.bg-img {
+  max-width: 100%;
+  width: min-content;
+  background-size: cover;
+  display: block;
+}
+
+.drag-container {
+  display: flex;
+  color: $text-primary;
+  align-items: center;
+  font-size: $rm * 8;
+  background: $background-primary;
+  justify-content: center;
+  padding: $rm * 4;
+}
+
+.drag-text {
+  margin: 0 $rm * 4; 
+}
+
+.actions-containter {
+  padding: $rm * 12;
+  padding-top: $rm * 4;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $table-bg-accent;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flip-move-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.label-buttons-pair {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: $rm * 8;
+  margin-bottom: 0;
+}
+
+.field-label {
+  font-size: $rm * 7;
+  margin: $rm * 2;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.action {
+  border-radius: $rm * 2;
+  border: 1px solid $brand-primary;
+  margin: 0 $rm*2;
+  background-color: $background-primary;
+  font-size: $rm * 7;
+  width: 45px;
+  height: $rm * 16;
+}
+
+.action:hover, .action:focus {
+  text-decoration: none;
+}
+
+.option-reset-container {
+  border: 0;
+  padding-top: $rm * 8;
+}
+
+.ec-modal-crop-footer {
+  display: flex;
+  padding: $rm * 8;
+}
+
+.single-button {
+  display: flex;
+  flex-grow: 1;
+}
+
+.btn-remove {
+  border: 0;
+}
+
+.double-button{
+  display: flex;
+  flex-grow: 0;
+}
+
+.btn-browse {
+  margin-right: 0;
+}
+
+.btn-change {
+  margin-right: $rm * 4;
+}
+
+@media screen and (max-width: 400px) {
+  .ec-modal-crop-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .single-button {
+    margin-bottom: $rm * 8;
+  }
+
+  .double-button {
+    width: 100%;
+  }
+
+  .btn-change, .btn-apply {
+    flex-grow: 1;
+  }
+
+}
+
+@media screen and (max-width: 440px) {
+  .actions-containter {
+    padding: $rm * 6;
+  }
+}
+
+.cropper-wrap-box {
+  background: rgba(0, 0, 0, 0.7);
+}
+.cropper-view-box {
+  border-radius: 50%;
+  outline: 0;
+  border: $rm solid $background-primary;
+}
+
+.cropper-line {
+  background-color: transparent;
+}
+
+.cropper-point {
+  background-color: transparent;
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.cropper-point.point-se::before {
+  background-color: $background-primary;
+}
+
+.cropper-face {
+  border-radius: 50%;
+}
+
+.disabled-button {
+  background-color: $brand-primary !important;
+  color: white !important;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Employee Center Image Editor Filme</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	if (input) {
+		data.description = input.description;
+		
+		data.placerholderIcon = input.placeholderIcon;
+		if(typeof input.broadcastId !== 'undefined')
+			data.broadcastId = input.broadcastId;
+		else
+			gs.info(gs.getMessage("Employee Center Image Editor: BroadcastId is empty, please specify the appropriate BroadcastId"));
+		data.isCircularCrop = input.isCircularCrop || false;
+		data.aspectRatio = input.aspectRatio || 1;
+		data.dragMode = input.dragMode || 'crop';
+		data.moveCropBox = input.isCropBoxMovable || false;
+		data.resizeCropBox = input.isCropBoxResizable || false;
+		data.viewMode = input.viewMode || 0;
+		data.autoCropArea = input.autoCropArea || 0.7;
+		
+		if (input.editorMode === 'new') {
+			data.isImagePresent = false;
+			data.isFirstUpload = true;
+			data.disableApplyButton = false;
+			data.headerTitle = gs.getMessage("Add {0} image", input.imageType);
+		} else {
+			if(typeof input.imgToProcess !== 'undefined')
+				data.imgSrc = input.imgToProcess;
+			else
+				gs.info(gs.getMessage("Employee Center Image Editor: Image is mandatory in Edit mode, please specify an image to process."));
+			data.isImagePresent = true;
+			data.isFirstUpload = false;
+			data.disableApplyButton = true;
+			data.headerTitle = gs.getMessage("Edit {0} image", input.imageType);
+		}
+	}
+	var validImageFormats = ".jpg, .png, .bmp, .jpeg, .svg";
+	data.removeMessage = gs.getMessage("Remove your {0} image", input.imageType);
+	data.supportedFormats = gs.getMessage("Supported file types: {0}", validImageFormats);
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 20:30:44</sys_created_on>
+        <sys_id>78642444931b02100d6eb4897bba101a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Employee Center Image Editor Filme</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_widget_78642444931b02100d6eb4897bba101a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 20:31:02</sys_updated_on>
+        <template><![CDATA[<div class = "ec-modal-container" ng-keydown="c.keyDownEvent($event)">
+  <input ng-show = "false"
+         type = "file"
+         id = "upload-image"
+         accept = "image/jpeg,image/png,image/bmp,image/x-windows-bmp,image/svg+xml"
+         ng-file-select = "c.attachFiles({files: $files})" />
+  
+  <div class = "ec-modal-header">
+    <h4 class = "ec-modal-title">{{data.headerTitle}}</h4>
+    <button type="button" 
+            class="ec-modal-close-btn fa fa-close" 
+            ng-click="c.closeModal()"
+            aria-label="Close modal"
+            data-toggle="tooltip"
+            title="${Close}"/>
+  </div>
+  
+  <div class = "ec-modal-welcome-body" 
+       ng-if ="!data.isImagePresent">
+    <div class = "image-container">
+      <i class="icon fa fa-{{data.placerholderIcon}}"/>
+    </div>
+    <div class = "description-container">
+      <span class = "description">{{data.description}}</span>
+      <span class = "supported-format">{{data.supportedFormats}}</span>
+    </div> 
+  </div>
+  
+  <div class= "ec-modal-welcome-footer" ng-if="!data.isImagePresent">
+    <button class= "btn btn-primary btn-browse"
+            ng-click="c.uploadNewImage($event)">${Browse image}</button>
+  </div>
+  
+  <div class= "ec-modal-crop-body" ng-if="data.isImagePresent">
+    <div class = "bg-img-container">
+      <img id="image" class = "bg-img" src = "{{data.imgSrc}}"/>
+    </div>
+
+    <div class = "drag-container">
+      <i class = "fa fa-arrows"/>
+      <span class = "drag-text">${Drag to reposition image}</span>
+    </div>
+    
+    <div class = "actions-containter" id = "actions">
+      <div class = "options-rotate-container">
+        <div class = "label-buttons-pair">
+          <span class = "field-label">${Rotate}</span>
+          <div class = "button-wrapper">
+            <button class="btn btn-link fa fa-rotate-right action" 
+                    aria-label="${Rotate clockwise}"
+                    ng-click="c.action($event)" 
+                    data-method="rotate" 
+                    data-option="90"
+                    data-toggle="tooltip" 
+                    data-container="body"
+                    title="${Rotate clockwise}"/>
+            <button class="btn btn-link fa fa-rotate-left action" 
+                    aria-label="${Rotate counter-clockwise}"
+                    ng-click="c.action($event)"
+                    data-method="rotate" 
+                    data-option="-90"
+                    data-toggle="tooltip" 
+                    data-container="body"
+                    title="${Rotate counter-clockwise}"/>
+          </div>
+        </div>
+      </div>
+      
+      <div class = "options-zoom-container">
+        <div class="label-buttons-pair">
+          <span class="field-label">${Zoom}</span>
+          <div class="button-wrapper">
+            <button class="btn btn-link fa fa-search-plus action"
+                    aria-label="${Zoom in}"
+                    ng-click="c.action($event)"  
+                    data-method="zoom" 
+                    data-option="0.1"
+                    data-toggle="tooltip" 
+                    data-container="body"
+                    title="${Zoom in}"/>
+            <button class="btn btn-link fa fa-search-minus action"
+                    aria-label="${Zoom out}"
+                    ng-click="c.action($event)"
+                    data-method="zoom"
+                    data-toggle="tooltip" 
+                    data-container="body"
+                    data-option="-0.1" 
+                    title="${Zoom out}"/>
+          </div>
+        </div>
+      </div>
+      
+        <div class = options-flip-container>
+          <div class = "label-buttons-pair">
+          <span class = "field-label">${Flip}</span>
+            <div class = "button-wrapper">
+              <button class = "btn btn-link fa fa-arrows-h action" 
+                      aria-label="${Flip horizontally}"
+                      ng-click = "c.action($event)" 
+                      data-method = "scaleX" 
+                      data-option = "-1"
+                      data-toggle="tooltip"
+                      data-container="body"
+                      title = "${Flip horizontally}"/>
+              <button class="btn btn-link fa fa-arrows-v action"
+                      aria-label="${Flip vertically}"
+                      ng-click="c.action($event)"
+                      data-toggle="tooltip" 
+                      data-container="body"
+                      data-method="scaleY" 
+                      data-option="-1" 
+                      title="${Flip vertically}"/>
+            </div>
+          </div>
+        </div>
+        
+        <div class = options-move-container>
+          <div class="label-buttons-pair">
+            <span class="field-label">${Move}</span>
+            <div class="button-wrapper">
+              <button class="btn btn-link fa fa-arrow-left action" 
+                      aria-label="${Move left}"
+                      ng-click="c.action($event)" 
+                      data-method="move" 
+                      data-option="-10"
+                      data-second-option="0"
+                      data-toggle="tooltip" 
+                      data-container="body"
+                      title="${Move left}"/>
+              <button class="btn btn-link fa fa-arrow-right action" 
+                      aria-label="${Move right}"
+                      ng-click="c.action($event)"
+                      data-method="move" 
+                      data-option="10" 
+                      data-second-option="0"
+                      data-toggle="tooltip" 
+                      data-container="body"
+                      title="${Move right}"/>
+              <button class="btn btn-link fa fa-arrow-up action" 
+                      aria-label="${Move up}"
+                      ng-click="c.action($event)" 
+                      data-method="move" 
+                      data-option="0" 
+                      data-second-option="-10"
+                      data-toggle="tooltip" 
+                      data-container="body"
+                      title="${Move up}"/>
+              <button class="btn btn-link fa fa-arrow-down action"
+                      aria-label="${Move down}"
+                      ng-click="c.action($event)" 
+                      data-method="move" 
+                      data-option="0" 
+                      data-second-option="10"
+                      data-toggle="tooltip" 
+                      data-container="body"
+                      title="${Move down}"/>
+            </div>
+          </div>
+        </div>
+      
+      <div class="option-reset-container" >
+        <button class="btn btn-link" 
+                aria-label="${Reset}"
+                ng-click="c.action($event)"
+                data-method="reset">${Reset}
+        </button>
+      </div>
+    </div>
+  
+   <div class= "ec-modal-crop-footer" ng-if="data.isImagePresent">
+     <div class = "single-button">
+       <button class= "btn btn-link btn-remove"
+               aria-label="${Remove image}"
+               ng-click="c.removeImage($event)"
+               ng-if = "!data.isFirstUpload">${Remove image}</button>
+     </div>
+     
+     <div class = "double-button">
+      <button class= "btn btn-default btn-change" aria-label="${Change image}"
+              ng-click="c.uploadNewImage($event)">${Change image}</button>
+      <button class= "btn btn-primary btn-apply" ng-disabled="data.disableApplyButton"
+              ng-class = "{'disabled-button': data.disableApplyButton}" aria-label="${Apply}"  tabindex="0"
+              ng-click="c.uploadImage($event)">${Apply}</button>
+       </div>
+  </div>
+ 
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

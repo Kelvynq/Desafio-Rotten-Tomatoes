@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">906fff77934702100d6eb4897bba10ea</sp_column>
+        <sp_widget display_value="knowledge Homepage Search">04ec050ddb53220099f93691f0b8f538</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 18:07:23</sys_created_on>
+        <sys_id>419388c8935702100d6eb4897bba103b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Aí Reviews" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Aí Reviews">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_instance_419388c8935702100d6eb4897bba103b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 18:07:23</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=419388c8935702100d6eb4897bba103b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sp_instance_419388c8935702100d6eb4897bba103b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>2</order><roles/><short_description/><size>md</size><sp_column display_value="1">906fff77934702100d6eb4897bba10ea</sp_column><sp_widget display_value="knowledge Homepage Search">04ec050ddb53220099f93691f0b8f538</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-04 18:07:23</sys_created_on><sys_id>419388c8935702100d6eb4897bba103b</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Raposa Aí Reviews" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Aí Reviews">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sp_instance_419388c8935702100d6eb4897bba103b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-04 18:07:23</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=419388c8935702100d6eb4897bba103b"/></record_update>]]></payload>
+        <payload_hash>-1529276752</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 18:07:23</sys_created_on>
+        <sys_id>899388c8935702100d6eb4897bba103d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1907eedf8ab0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 18:07:23</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>8d9388c881570210e5587d937c670b3c</update_guid>
+        <update_guid_history>8d9388c881570210e5587d937c670b3c:-1529276752</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">6a9388c8935702100d6eb4897bba109c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 18:07:29</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>1673827178424c3e9a401fbad6447884</sys_id>
+        <sys_metadata>419388c8935702100d6eb4897bba103b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sp_instance_419388c8935702100d6eb4897bba103b</sys_update_name>
+        <sys_update_version display_value="sp_instance_419388c8935702100d6eb4897bba103b">899388c8935702100d6eb4897bba103d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 18:07:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="DELETE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>Default GET</function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>API OMDB [ Default GET ]</qualified_name>
+        <rest_endpoint>http://www.omdbapi.com/?apikey=${omdb_api_key}&amp;t=${movie_name} </rest_endpoint>
+        <rest_message display_value="API OMDB">c6020dd3934b42100d6eb4897bba1014</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-02 17:45:13</sys_created_on>
+        <sys_id>c95b2517930f42100d6eb4897bba106c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Default GET</sys_name>
+        <sys_package display_value="Raposa Aí Reviews" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Aí Reviews">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_rest_message_fn_c95b2517930f42100d6eb4897bba106c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-02 17:54:06</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sys_rest_message_fn_c95b2517930f42100d6eb4897bba106c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>inherit_from_parent</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content/><function_name>Default GET</function_name><http_method>get</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>API OMDB [ Default GET ]</qualified_name><rest_endpoint>http://www.omdbapi.com/?apikey=${omdb_api_key}&amp;t=${movie_name} </rest_endpoint><rest_message display_value="API OMDB">c6020dd3934b42100d6eb4897bba1014</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-02 17:45:13</sys_created_on><sys_id>c95b2517930f42100d6eb4897bba106c</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Default GET</sys_name><sys_package display_value="Raposa Aí Reviews" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Aí Reviews">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sys_rest_message_fn_c95b2517930f42100d6eb4897bba106c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-02 17:54:06</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
+        <payload_hash>-722223983</payload_hash>
+        <record_name>Default GET</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-02 17:54:06</sys_created_on>
+        <sys_id>df5ded9b930f42100d6eb4897bba100b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1907495199a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-02 17:54:06</sys_updated_on>
+        <type>HTTP Method</type>
+        <update_guid>975ded9b150f421077ff8337122b530b</update_guid>
+        <update_guid_history>975ded9b150f421077ff8337122b530b:-722223983,e40de99b890f42102ecd7afa3f065925:92481461,cd5b2517bb0f4210ee466a3039c2eb6e:1353516325</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-02 17:57:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_fn">sys_rest_message_fn</sys_db_object>
+        <sys_id>0b5ebc000d15407880c605d7fe2f78b9</sys_id>
+        <sys_metadata>c95b2517930f42100d6eb4897bba106c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default GET</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_c95b2517930f42100d6eb4897bba106c</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_c95b2517930f42100d6eb4897bba106c">df5ded9b930f42100d6eb4897bba100b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-02 17:57:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

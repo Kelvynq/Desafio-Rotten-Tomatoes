@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_908210_raposa_0_atores" version="2" view="workspace-raposa-carrossel-0">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>nome_do_ator</element>
+            <list_id display_value="x_908210_raposa_0_atores" element="NULL" name="x_908210_raposa_0_atores" parent="NULL" relationship="NULL" sys_domain="global" view="9a7778e370d70210417e9b2ddfe6e4a2">8d877ce393d702100d6eb4897bba108c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 18:53:02</sys_created_on>
+            <sys_id>49877ce393d702100d6eb4897bba108d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 18:53:02</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>filme</element>
+            <list_id display_value="x_908210_raposa_0_atores" element="NULL" name="x_908210_raposa_0_atores" parent="NULL" relationship="NULL" sys_domain="global" view="9a7778e370d70210417e9b2ddfe6e4a2">8d877ce393d702100d6eb4897bba108c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 18:53:02</sys_created_on>
+            <sys_id>4d877ce393d702100d6eb4897bba108d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 18:53:02</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_908210_raposa_0_atores" element="NULL" name="x_908210_raposa_0_atores" parent="NULL" relationship="NULL" sys_domain="global" view="9a7778e370d70210417e9b2ddfe6e4a2">8d877ce393d702100d6eb4897bba108c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 18:53:02</sys_created_on>
+            <sys_id>41877ce393d702100d6eb4897bba108e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 18:53:02</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_by</element>
+            <list_id display_value="x_908210_raposa_0_atores" element="NULL" name="x_908210_raposa_0_atores" parent="NULL" relationship="NULL" sys_domain="global" view="9a7778e370d70210417e9b2ddfe6e4a2">8d877ce393d702100d6eb4897bba108c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 18:53:02</sys_created_on>
+            <sys_id>45877ce393d702100d6eb4897bba108e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 18:53:02</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="x_908210_raposa_0_atores" element="NULL" name="x_908210_raposa_0_atores" parent="NULL" relationship="NULL" sys_domain="global" view="9a7778e370d70210417e9b2ddfe6e4a2">8d877ce393d702100d6eb4897bba108c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 18:53:02</sys_created_on>
+            <sys_id>49877ce393d702100d6eb4897bba108e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 18:53:02</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_by</element>
+            <list_id display_value="x_908210_raposa_0_atores" element="NULL" name="x_908210_raposa_0_atores" parent="NULL" relationship="NULL" sys_domain="global" view="9a7778e370d70210417e9b2ddfe6e4a2">8d877ce393d702100d6eb4897bba108c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 18:53:02</sys_created_on>
+            <sys_id>4d877ce393d702100d6eb4897bba108e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 18:53:02</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_mod_count</element>
+            <list_id display_value="x_908210_raposa_0_atores" element="NULL" name="x_908210_raposa_0_atores" parent="NULL" relationship="NULL" sys_domain="global" view="9a7778e370d70210417e9b2ddfe6e4a2">8d877ce393d702100d6eb4897bba108c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 18:53:02</sys_created_on>
+            <sys_id>41877ce393d702100d6eb4897bba108f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 18:53:02</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_908210_raposa_0_atores</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-15 18:53:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8d877ce393d702100d6eb4897bba108c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_908210_raposa_0_atores</sys_name>
+            <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+            <sys_update_name>sys_ui_list_x_908210_raposa_0_atores_workspace-raposa-carrossel-0</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-15 18:53:02</sys_updated_on>
+            <sys_user/>
+            <view display_value="Workspace Raposa Carrossel 0" name="workspace-raposa-carrossel-0">9a7778e370d70210417e9b2ddfe6e4a2</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

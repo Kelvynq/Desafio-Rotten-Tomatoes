@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>OMDB</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var requestBody = request.body.data;
+    var movieTitle = requestBody.movieTitle;
+    var omdbData = getOmdbData(movieTitle);
+
+    if (omdbData && omdbData.Response === "True") {
+        var movieGR = new GlideRecord('u_movie_table');
+        movieGR.initialize();
+        movieGR.u_title = omdbData.Title;
+        movieGR.u_year = omdbData.Year;
+        movieGR.u_rating = omdbData.imdbRating;
+        movieGR.u_director = omdbData.Director;
+        movieGR.u_genre = omdbData.Genre;
+        movieGR.insert();
+    
+        response.setBody({status: 'success', data: omdbData});
+    } else {
+        response.setBody({status: 'error', message: 'Movie not found'});
+    }
+
+    function getOmdbData(movieTitle) {
+        var client = new sn_ws.RESTMessageV2();
+        client.setHttpMethod('GET');
+        client.setEndpoint('http://www.omdbapi.com/?t=' + encodeURIComponent(movieTitle) + '&apikey=your_omdb_api_key');
+        var response = client.execute();
+        var responseBody = response.getBody();
+        var parsedResponse = JSON.parse(responseBody);
+        return parsedResponse;
+    }
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_908210_raposa_0/omdb_api</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-27 20:32:35</sys_created_on>
+        <sys_id>c581e431938302100d6eb4897bba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>OMDB</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_ws_operation_c581e431938302100d6eb4897bba10d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-27 20:32:35</sys_updated_on>
+        <web_service_definition display_value="OMDB API">dd41a031938302100d6eb4897bba1065</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

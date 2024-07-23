@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function c() {
+  /* widget controller */
+  var c = this; // Referência ao controlador do widget
+  var currentIndex = 0; // Índice atual do slide no carrossel
+
+  // Função para dividir os registros em blocos de 3 para exibição no carrossel
+  function chunkArray(myArray, chunk_size) {
+    var results = []; // Array que armazenará os blocos
+    while (myArray.length) { // Enquanto houver itens no array
+      results.push(myArray.splice(0, chunk_size)); // Remove e retorna os primeiros 'chunk_size' itens do array
+    }
+    return results; // Retorna os blocos divididos
+  }
+
+  // Atualiza o carrossel para mostrar o bloco correto
+  function updateCarousel() {
+    var track = document.querySelector('.carousel-track'); // Seleciona o elemento que contém os itens do carrossel
+    var totalItems = c.data.recordsChunks.length; // Número total de blocos
+    var itemWidth = document.querySelector('.carousel-item').offsetWidth; // Largura de um item do carrossel
+    track.style.transform = 'translateX(-' + (currentIndex * itemWidth) + 'px)'; // Move o carrossel para mostrar o bloco atual
+  }
+
+  // Avança no carrossel
+  c.nextSlide = function() {
+    var totalItems = c.data.recordsChunks.length; // Número total de blocos
+    if (currentIndex < totalItems - 1) { // Se não estiver no último bloco
+      currentIndex++; // Avança para o próximo bloco
+    } else {
+      currentIndex = 0; // Volta para o primeiro bloco
+    }
+    updateCarousel(); // Atualiza o carrossel para mostrar o bloco atual
+  };
+
+  // Volta no carrossel
+  c.prevSlide = function() {
+    var totalItems = c.data.recordsChunks.length; // Número total de blocos
+    if (currentIndex > 0) { // Se não estiver no primeiro bloco
+      currentIndex--; // Volta para o bloco anterior
+    } else {
+      currentIndex = totalItems - 1; // Vai para o último bloco
+    }
+    updateCarousel(); // Atualiza o carrossel para mostrar o bloco atual
+  };
+
+  // Solicita os dados ao servidor
+  c.server.get().then(function(response) {
+    c.data.records = response.data.records; // Armazena os registros recebidos do servidor
+    c.data.recordsChunks = chunkArray(c.data.records, 3); // // Divide os registros em blocos de 3
+  });
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.titulo {&#13;
+  font-size: 2em;&#13;
+  color: #333;&#13;
+}&#13;
+.carousel-container {&#13;
+  position: relative;&#13;
+  overflow: hidden;&#13;
+  width: 100%;&#13;
+}&#13;
+.carousel {&#13;
+  display: flex;&#13;
+}&#13;
+.carousel-track {&#13;
+  display: flex;&#13;
+  transition: transform 0.5s ease-in-out;&#13;
+}&#13;
+.carousel-item {&#13;
+  min-width: 100%;&#13;
+  box-sizing: border-box;&#13;
+  display: flex;&#13;
+  padding: 0 10px; /* Adiciona espaçamento horizontal entre os itens */&#13;
+}&#13;
+.carousel-item .row {&#13;
+  display: flex;&#13;
+  justify-content: space-between; /* Espaçamento entre os cartões */&#13;
+}&#13;
+.card {&#13;
+  margin: 0 5px; /* Adiciona espaço entre os cartões */&#13;
+  flex: 1 0 calc(25% - 10px); /* Ajuste a largura dos cartões para 25% menos o espaço extra */&#13;
+  box-sizing: border-box; /* Garante que a margem seja considerada no cálculo da largura */&#13;
+}&#13;
+.card-body {&#13;
+  text-align: center;&#13;
+}&#13;
+.carousel-control-prev,&#13;
+.carousel-control-next {&#13;
+  position: absolute;&#13;
+  top: 50%;&#13;
+  transform: translateY(-50%);&#13;
+  background-color: rgba(0, 0, 0, 0.5);&#13;
+  color: white;&#13;
+  border: none;&#13;
+  font-size: 2em;&#13;
+  cursor: pointer;&#13;
+}&#13;
+.carousel-control-prev {&#13;
+  left: 10px;&#13;
+}&#13;
+.img{&#13;
+  margin-left:30px;&#13;
+}&#13;
+.carousel-control-next {&#13;
+  right: 10px;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>CarrosselDados</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  // Defina a tabela de onde deseja buscar os dados
+  var tableName = 'x_908210_raposa_0_filmes';
+  
+  var gr = new GlideRecord(tableName);
+  gr.query();
+
+  var records = [];
+  while (gr.next()) {
+    records.push({
+      link: gr.getValue('link')
+    });
+  }
+
+  // Envia os dados para o cliente
+  data.records = records;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-18 19:33:00</sys_created_on>
+        <sys_id>ac4dd82c932746100d6eb4897bba1045</sys_id>
+        <sys_mod_count>53</sys_mod_count>
+        <sys_name>CarrosselDados</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_widget_ac4dd82c932746100d6eb4897bba1045</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-19 20:11:07</sys_updated_on>
+        <template><![CDATA[<div style="margin-bottom:25px">
+  <div id="customCarousel" class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-track">
+                <!-- Faixa que contém os itens do carrossel -->
+        <div class="carousel-item" ng-repeat="chunk in c.data.recordsChunks">
+           <!-- Um item do carrossel que será repetido para cada chunk em c.data.recordsChunks -->
+          <div class="row">
+                        <!-- Linha para organizar os registros -->
+            <div class="col-md-3" ng-repeat="record in chunk">
+            <!-- Coluna que será repetida para cada registro em chunk -->
+              <div class="card">
+                <img class="d-block w-100" src="{{record.link}}" alt="Imagem do Filme">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" ng-click="c.prevSlide()">‹</button>
+    <button class="carousel-control-next" ng-click="c.nextSlide()">›</button>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

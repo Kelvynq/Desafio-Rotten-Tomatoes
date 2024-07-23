@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_search_context_config_search_source">
+    <m2m_search_context_config_search_source action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <search_context_config display_value="WS Raposa - Workspace Search">0d29d7862d1f4210518a3504e3664110</search_context_config>
+        <source display_value="WS Raposa - x_908210_raposa_0_filmes">fa295b86931f42100d6eb4897bba1032</source>
+        <sys_class_name>m2m_search_context_config_search_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 14:48:25</sys_created_on>
+        <sys_id>fa295b86931f42100d6eb4897bba1035</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>m2m_search_context_config_search_source_fa295b86931f42100d6eb4897bba1035</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 14:48:25</sys_updated_on>
+    </m2m_search_context_config_search_source>
+</record_update>

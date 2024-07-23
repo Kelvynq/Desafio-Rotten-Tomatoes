@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="" section_id="c2fdd7ca931f42100d6eb4897bba10d3" sys_domain="global" table="x_908210_raposa_0_filmes2" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-11 15:09:23</sys_created_on>
+            <sys_id>0afd174e931f42100d6eb4897bba1099</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-11 15:09:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>nome_do_filme</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-11 15:09:43</sys_created_on>
+            <sys_id>fa0e934e931f42100d6eb4897bba1017</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-11 15:09:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sinopse</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-11 15:11:01</sys_created_on>
+            <sys_id>715e174e931f42100d6eb4897bba10c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-11 15:11:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>categoria</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-11 15:11:20</sys_created_on>
+            <sys_id>266e170e931f42100d6eb4897bba1027</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-11 15:11:20</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>nota_imdb_critica</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-11 15:12:04</sys_created_on>
+            <sys_id>559e538e931f42100d6eb4897bba1070</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-11 15:12:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>nota_da_raposa</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-11 15:12:26</sys_created_on>
+            <sys_id>f2ae578e931f42100d6eb4897bba101d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-11 15:12:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption/>
+            <header>false</header>
+            <name>x_908210_raposa_0_filmes2</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-11 15:09:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c2fdd7ca931f42100d6eb4897bba10d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_908210_raposa_0_filmes2</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+            <sys_update_name>sys_ui_section_c2fdd7ca931f42100d6eb4897bba10d3</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-11 15:09:23</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sys_ui_section_c2fdd7ca931f42100d6eb4897bba10d3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="c2fdd7ca931f42100d6eb4897bba10d3" sys_domain="global" table="x_908210_raposa_0_filmes2" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>number</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 15:09:23</sys_created_on><sys_id>0afd174e931f42100d6eb4897bba1099</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 15:09:23</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>nome_do_filme</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 15:09:43</sys_created_on><sys_id>fa0e934e931f42100d6eb4897bba1017</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 15:09:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>sinopse</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 15:11:01</sys_created_on><sys_id>715e174e931f42100d6eb4897bba10c2</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 15:11:01</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>categoria</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 15:11:20</sys_created_on><sys_id>266e170e931f42100d6eb4897bba1027</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 15:11:20</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>nota_imdb_critica</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 15:12:04</sys_created_on><sys_id>559e538e931f42100d6eb4897bba1070</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 15:12:04</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>nota_da_raposa</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 15:12:26</sys_created_on><sys_id>f2ae578e931f42100d6eb4897bba101d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_908210_raposa_0_filmes2" sys_domain="global" view="Default view">c2fdd7ca931f42100d6eb4897bba10d3</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 15:12:26</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_908210_raposa_0_filmes2</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 15:09:23</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c2fdd7ca931f42100d6eb4897bba10d3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_908210_raposa_0_filmes2</sys_name><sys_overrides/><sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sys_ui_section_c2fdd7ca931f42100d6eb4897bba10d3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 15:09:23</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-1404379616</payload_hash>
+        <record_name>Filmes2</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 15:12:26</sys_created_on>
+        <sys_id>baae578e931f42100d6eb4897bba101f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190a25a52c40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 15:12:26</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>32ae578e631f42104fcf2b0938d3ad1f</update_guid>
+        <update_guid_history>32ae578e631f42104fcf2b0938d3ad1f:-1404379616,519e538e1e1f4210fa81bd5e066f0e72:2048189636,ee6e170e4e1f42109d283d15ba446128:-240442003,f95e174e801f421058b77c58e090d8c3:2001822793,360e934eb71f421019b0246ebe484419:-827420674,02fd174e5a1f42102db64927d78d0e9b:1803745212,02fd174ee81f4210b62a54423bba8399:1021049767</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 16:01:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>0052cfaafd0c41448000307b2449af04</sys_id>
+        <sys_metadata>c2fdd7ca931f42100d6eb4897bba10d3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_908210_raposa_0_filmes2</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent display_value="">45dd534e931f42100d6eb4897bba1004</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sys_ui_section_c2fdd7ca931f42100d6eb4897bba10d3</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_c2fdd7ca931f42100d6eb4897bba10d3">baae578e931f42100d6eb4897bba101f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 16:01:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

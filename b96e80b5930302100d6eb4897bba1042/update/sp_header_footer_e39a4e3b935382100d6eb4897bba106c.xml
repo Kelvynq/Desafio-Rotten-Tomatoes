@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>sample</category>
+        <client_script><![CDATA[function c() {
+  // widget controller
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.sample-footer {&#13;
+  background-color: #194E80; &#13;
+  color: white; &#13;
+  padding: 14px;&#13;
+  text-align: center;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Sample Footer Filme</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+ data.time = new GlideDateTime().getDisplayValue();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 19:34:35</sys_created_on>
+        <sys_id>e39a4e3b935382100d6eb4897bba106c</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Sample Footer Filme</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_header_footer_e39a4e3b935382100d6eb4897bba106c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 19:41:44</sys_updated_on>
+        <template><![CDATA[ <div class="sample-footer" role="contentinfo">	
+ <!-- ${Página gerada em {{::c.data.time}}} -->
+   <p>&copy; 2024 Raposa AI Reviews. Todos os direitos reservados.</p>
+ </div>]]></template>
+    </sp_header_footer>
+</record_update>

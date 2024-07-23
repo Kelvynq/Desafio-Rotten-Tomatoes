@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function c(){
+var movie = g_form.getValue('nome').replace(/ /g, '+');
+    var ga = new GlideAjax('x_908210_raposa_0.OMDBsi');
+    ga.addParam('sysparm_name', 'getMovie'); //função do Script Include
+    ga.addParam('sysparm_movie', movie);
+    ga.getXML(callBackFunction);
+ 
+function callBackFunction(response) {
+    var answer = response.responseXML.documentElement.getAttribute("answer");
+    var data = JSON.parse(answer);
+	g_form.setValue('imagem', data.Poster);
+}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>img {&#13;
+  max-width: 100%;&#13;
+  height: auto;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>PosterOmdb</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  // Defina sua chave da API OMDB
+  var apiKey = '6af5cc6d';
+  
+  // Obtenha o título do filme a partir dos parâmetros
+  var movieTitle = 'harry potter';
+  
+  // URL da API OMDB
+  var url = 'https://www.omdbapi.com/?apikey=' + apiKey + '&t=' + movieTitle;
+  
+  // Faça a requisição HTTP à API OMDB
+  try {
+    var request = new sn_ws.RESTMessageV2();
+    request.setHttpMethod('GET');
+    request.setEndpoint(url);
+
+    var response = request.execute();
+    var responseBody = response.getBody();
+    var parsedResponse = JSON.parse(responseBody);
+
+    // Retorne a URL do poster se disponível
+    if (parsedResponse && parsedResponse.Poster) {
+      data.result = parsedResponse.Poster;
+    } else {
+      data.result = '';
+    }
+  } catch (ex) {
+    gs.error('Erro ao buscar o poster do filme: ' + ex.message);
+    data.result = '';
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-08 13:09:35</sys_created_on>
+        <sys_id>97732f89931302100d6eb4897bba1010</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>PosterOmdb</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_widget_97732f89931302100d6eb4897bba1010</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 14:12:29</sys_updated_on>
+        <template><![CDATA[<div ng-if="data.posterUrl">
+  <img ng-src="{{data.posterUrl}}" alt="Movie Poster" />
+</div>
+<div ng-if="!data.posterUrl">
+  <p>Poster not available.</p>
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sp_widget_97732f89931302100d6eb4897bba1010</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function c(){
+var movie = g_form.getValue('nome').replace(/ /g, '+');
+    var ga = new GlideAjax('x_908210_raposa_0.OMDBsi');
+    ga.addParam('sysparm_name', 'getMovie'); //função do Script Include
+    ga.addParam('sysparm_movie', movie);
+    ga.getXML(callBackFunction);
+ 
+function callBackFunction(response) {
+    var answer = response.responseXML.documentElement.getAttribute("answer");
+    var data = JSON.parse(answer);
+	g_form.setValue('imagem', data.Poster);
+}
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;img {&amp;#13;
+  max-width: 100%;&amp;#13;
+  height: auto;&amp;#13;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;PosterOmdb&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  // Defina sua chave da API OMDB
+  var apiKey = '6af5cc6d';
+  
+  // Obtenha o título do filme a partir dos parâmetros
+  var movieTitle = 'harry potter';
+  
+  // URL da API OMDB
+  var url = 'https://www.omdbapi.com/?apikey=' + apiKey + '&amp;t=' + movieTitle;
+  
+  // Faça a requisição HTTP à API OMDB
+  try {
+    var request = new sn_ws.RESTMessageV2();
+    request.setHttpMethod('GET');
+    request.setEndpoint(url);
+
+    var response = request.execute();
+    var responseBody = response.getBody();
+    var parsedResponse = JSON.parse(responseBody);
+
+    // Retorne a URL do poster se disponível
+    if (parsedResponse &amp;&amp; parsedResponse.Poster) {
+      data.result = parsedResponse.Poster;
+    } else {
+      data.result = '';
+    }
+  } catch (ex) {
+    gs.error('Erro ao buscar o poster do filme: ' + ex.message);
+    data.result = '';
+  }
+})();
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-07-08 13:09:35&lt;/sys_created_on&gt;&lt;sys_id&gt;97732f89931302100d6eb4897bba1010&lt;/sys_id&gt;&lt;sys_mod_count&gt;55&lt;/sys_mod_count&gt;&lt;sys_name&gt;PosterOmdb&lt;/sys_name&gt;&lt;sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Raposa Carrossel"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_97732f89931302100d6eb4897bba1010&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-07-10 14:12:29&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div ng-if="data.posterUrl"&gt;
+  &lt;img ng-src="{{data.posterUrl}}" alt="Movie Poster" /&gt;
+&lt;/div&gt;
+&lt;div ng-if="!data.posterUrl"&gt;
+  &lt;p&gt;Poster not available.&lt;/p&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1223990773</payload_hash>
+        <record_name>PosterOmdb</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-10 14:12:29</sys_created_on>
+        <sys_id>f65786fd935302100d6eb4897bba109d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1909cfd14970000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 14:12:29</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>be5786fd335302107f6d48105b35d99c</update_guid>
+        <update_guid_history>be5786fd335302107f6d48105b35d99c:-1223990773,ccb602bd07530210e710eea235935d2d:-849747829,2f8602bd9a5302107c5153090527376b:-902043997,066682bd6f530210c3d7f35d53185f96:-1490579674,ab264e7de25302104398220dc297013e:-1923549332,57f50a3dba53021083ec2fc257c0926e:387138365,79d50a3d9d53021012243f75a89cb7a9:240808906,ad35823d30530210b8e479e402aef794:-239077994,05e40a793b530210e9f6ed86dc350d20:-1965075842,017d79b14c5302105ed4fd95afc2b35a:-980941317,2e5df5b17c53021051d02f0a5a2a9471:39334258,c82db1b18f530210484c403f692fac3f:558715013,c52cbd31fe530210288580864ac55a84:48237468,e44a7d7da9130210933ba8a40cea0595:1880477768,a01a31bd1e1302105dd04f1a52c123d0:-922500958,53a9797d11130210c6cc7f4334c35228:1880477768,51f8b53d33130210b974e4aa0d8180be:-1737319676,05c8353de5130210c3b72eda706b8bfb:-102073453,bcb8f5f9b81302109c5c0f828899872d:405268438,3272f49dc39702102503e944b00852dc:-1584380538,e872389ddd9702106c9c8ce51c10127b:-129151366,ee52f49d7e970210baf76ba58a625bd7:-11752312,7012b09db59702108dec9090f6c72b66:1296968772,7ec1f8d9c197021073c141732bf7d0d3:-2037697947,0e117c99e9970210c8f36962903d24cc:-1715446413,073fe859f2970210ca16c1e00b880e94:-1184437519,34de24599497021005fae50bb418b764:1681108709,c70e2459c59702105e384d6ed108435d:2035230540,f5b8e051d0970210d376d9699e99af75:434138768,bc982491a2970210e7599690f127f1f4:203415259,9d47e49923170210f1a7899589b4af6b:14280173,f586d0d995170210c6af5a7e869f348a:845056995,e29518d12e170210714241e432bee342:-1214277330,58945c51271702102b949a8172b8da19:555501100,cdc3549169170210ad11eb2d8d8c0d4e:-2003473564,c61eccdd41d30210b0c0a1c6ae6e371f:996365840,bacdcc11c6170210871b3ee54c4ab0ff:-236804882,5dfcccddb8d30210983645ab07da4915:999492543,c2cb8c5d40d3021048221b00775941bf:908959673,78c1c851e6d3021071694be647ee4a97:1570134338,a381485140d302109271b46f8bcee0f8:580357301,44c77f815493021011f37cb6e59bf8ec:908959673,e0373fc18b930210e2e1a8749e92db77:1739143247,47c673c1e4930210980d96c82b728cb1:1572205553,64a63f81af930210c319e8b0df5d6a99:539536480,aa763f81f9930210774dd496d70309de:1572205553,a336bf4147930210e2f0afc56874b2ce:1739143247,40857f01c1930210280cc994b150ca99:-490070725,94cf6789d353021007ac69d3bee4b214:81068447,22bfaf8508530210fa1ae07e2d0e47e5:1119619380,ebdb2b05ab53021040b580da17fa180d:-191044268,0c2bab811d530210e31e76faa3a83a4c:1186350733,5b9a2b81f553021078dd6ee04fdb3ab0:-781825294,44a92b81b0530210b42e63470ab1f2a9:-73214918,3228e70185530210f9ad908496b07dac:-106812247,39c56b89ea130210790fd1b9dd0151d3:1996199455</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="PosterOmdb">9c60d2f9939302100d6eb4897bba108f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-10 14:51:55</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>4ee17a41754b4072b62681d4428419a4</sys_id>
+        <sys_metadata>97732f89931302100d6eb4897bba1010</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PosterOmdb</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sp_widget_97732f89931302100d6eb4897bba1010</sys_update_name>
+        <sys_update_version display_value="sp_widget_97732f89931302100d6eb4897bba1010">f65786fd935302100d6eb4897bba109d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 14:51:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

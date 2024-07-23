@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>nome_do_filme</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name/>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Construir a URL da API OMDB
+    var omdbUrl = 'https://www.omdbapi.com/?t=' + encodeURIComponent(newValue) + '&apikey=6af5cc6d';
+
+    // Realizar uma chamada AJAX para a API OMDB
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', omdbUrl);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var responseObj = JSON.parse(xhr.responseText);
+                if (responseObj.Response === 'True') {
+                    var posterUrl = responseObj.Poster;
+                    if (posterUrl) {
+                        // Atualizar a variável Rich Text com a tag <img>
+                        g_form.setValue('movie_poster', '<img src="' + posterUrl + '" alt="Poster do Filme">');
+                    } else {
+                        g_form.setValue('movie_poster', 'Poster não encontrado.');
+                    }
+                } else {
+                    g_form.setValue('movie_poster', 'Filme não encontrado.');
+                }
+            } else {
+                g_form.setValue('movie_poster', 'Erro ao buscar o filme.');
+            }
+        }
+    };
+    xhr.send();
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-08 20:46:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d41e8951935b02100d6eb4897bba10fc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_script_client_d41e8951935b02100d6eb4897bba10fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-08 20:47:39</sys_updated_on>
+        <table>x_908210_raposa_0_filmes</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sys_script_client_d41e8951935b02100d6eb4897bba10fc</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;nome_do_filme&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name/&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // Construir a URL da API OMDB
+    var omdbUrl = 'https://www.omdbapi.com/?t=' + encodeURIComponent(newValue) + '&amp;apikey=6af5cc6d';
+
+    // Realizar uma chamada AJAX para a API OMDB
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', omdbUrl);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var responseObj = JSON.parse(xhr.responseText);
+                if (responseObj.Response === 'True') {
+                    var posterUrl = responseObj.Poster;
+                    if (posterUrl) {
+                        // Atualizar a variável Rich Text com a tag &lt;img&gt;
+                        g_form.setValue('movie_poster', '&lt;img src="' + posterUrl + '" alt="Poster do Filme"&gt;');
+                    } else {
+                        g_form.setValue('movie_poster', 'Poster não encontrado.');
+                    }
+                } else {
+                    g_form.setValue('movie_poster', 'Filme não encontrado.');
+                }
+            } else {
+                g_form.setValue('movie_poster', 'Erro ao buscar o filme.');
+            }
+        }
+    };
+    xhr.send();
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-07-08 20:46:23&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;d41e8951935b02100d6eb4897bba10fc&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Raposa Carrossel"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_d41e8951935b02100d6eb4897bba10fc&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-07-08 20:47:39&lt;/sys_updated_on&gt;&lt;table&gt;x_908210_raposa_0_filmes&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>5644820</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-08 20:47:39</sys_created_on>
+        <sys_id>279e4d91935b02100d6eb4897bba1095</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190941a224a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-08 20:47:39</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>eb9e4d914e5b02103ea21322e53f9694</update_guid>
+        <update_guid_history>eb9e4d914e5b02103ea21322e53f9694:5644820,5d5e45ddb81b0210f46dad799c1dc241:1967014071</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 15:44:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>23450812fd6f436c96ace7080f3c9824</sys_id>
+        <sys_metadata>d41e8951935b02100d6eb4897bba10fc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent display_value="Filmes">506150b9930302100d6eb4897bba10bf</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sys_script_client_d41e8951935b02100d6eb4897bba10fc</sys_update_name>
+        <sys_update_version display_value="sys_script_client_d41e8951935b02100d6eb4897bba10fc">279e4d91935b02100d6eb4897bba1095</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 15:44:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

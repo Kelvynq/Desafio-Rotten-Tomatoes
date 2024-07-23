@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Check SLA Expiry for RITM</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2024-07-10 20:23:17</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var taskSlaGr = new GlideRecord('task_sla');
+taskSlaGr.addQuery('sla', 'RITM Approval SLA');
+taskSlaGr.addQuery('stage', 'breached');
+taskSlaGr.query();
+
+while (taskSlaGr.next()) {
+    var ritmGr = new GlideRecord('sc_req_item');
+    if (ritmGr.get(taskSlaGr.task)) {
+        ritmGr.setValue('state', '-10'); // 'On Hold' value
+        ritmGr.update();
+
+        // Enviar notificação para Assigned To e Requested For
+        var email = new GlideEmailOutbound();
+        email.setSubject('SLA Expired: RITM On Hold');
+        email.setBody('The SLA for the RITM has expired and the state has been set to On Hold.');
+        
+        // Para Assigned To
+        if (ritmGr.assigned_to) {
+            email.addAddress('to', ritmGr.assigned_to.email);
+        }
+
+        // Para Requested For
+        if (ritmGr.requested_for) {
+            email.addAddress('to', ritmGr.requested_for.email);
+        }
+
+        email.send();
+    }
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-10 20:24:23</sys_created_on>
+        <sys_id>163cd77d931b02100d6eb4897bba107d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Check SLA Expiry for RITM</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sysauto_script_163cd77d931b02100d6eb4897bba107d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 20:24:23</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

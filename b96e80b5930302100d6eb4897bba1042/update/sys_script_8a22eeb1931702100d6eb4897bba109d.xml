@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_908210_raposa_0_filmes</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Dir e ator</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+ 
+	// Cria uma nova instância da mensagem REST
+	var rest = new sn_ws.RESTMessageV2('x_908210_raposa_0.OMDBapi', 'GetMovie');
+	// SET PARAMETROS
+    rest.setStringParameter('movie_name', current.nome_do_filme.replace(/ /g, '+')); //movie_name -> parametro Rest
+    rest.setStringParameterNoEscape('url', 'http://www.omdbapi.com/');
+    rest.setStringParameterNoEscape('omdb_api_key', '6af5cc6d');
+	// Executa a chamada REST
+    var response = rest.execute();
+	// Obtém o corpo da resposta da API
+    var responseBody = response.getBody();
+	// Obtém o código de status HTTP da resposta
+    var httpStatus = response.getStatusCode();
+ 
+    if (httpStatus == '200') {
+        var data = JSON.parse(responseBody);
+ 
+        // Verificar e inserir atores
+        var actors = data.Actors.split(',');
+        var processedActors = {}; // Conjunto de registros para acompanhar atores processados
+        for (let i = 0; i < actors.length; i++) {
+            var actorName = actors[i].trim();  // Remover espaços extras
+            if (processedActors[actorName]) {             // Remove espaços extras do nome do ator
+                continue; // Pular se o ator já foi processado
+            }
+            processedActors[actorName] = true; // Marca o ator como processado
+
+ 
+            var grActor = new GlideRecord('x_908210_raposa_0_atores');
+            grActor.addQuery('nome_do_ator', actorName);
+            grActor.query();
+ 
+			// Se o ator não existir na tabela
+            if (!grActor.next()) {
+				// Inicializa um novo registro de ator
+                grActor.initialize();
+				// Define o nome do ator
+                grActor.nome_do_ator = actorName;
+				// Associa o filme atual ao ator
+                grActor.filme = current.sys_id; // Primeiro filme para este ator
+				// Insere o novo registro de ator na tabela
+                grActor.insert();
+            } else {
+                // Verificar se o filme já está na lista
+                var moviesList = grActor.filme ? grActor.filme.split(',') : [];
+				// Se o filme não estiver na lista, adiciona-o
+                if (moviesList.indexOf(current.sys_id) === -1) {
+                    moviesList.push(current.sys_id);
+					// Atualiza a lista de filmes associados ao ator
+                    grActor.filme = moviesList.join(',');
+					// Atualiza o registro de ator na tabela
+                    grActor.update();
+                }
+            }
+        }
+ 
+        // Verificar e inserir diretores
+        var directors = data.Director.split(',');
+        var processedDirectors = {}; // Conjunto de registros para acompanhar diretores processados
+        for (let i = 0; i < directors.length; i++) {
+            var directorName = directors[i].trim();  // Remover espaços extras
+            if (processedDirectors[directorName]) {
+                continue; // Pular se o diretor já foi processado
+            }
+            processedDirectors[directorName] = true;
+ 
+            var grDirector = new GlideRecord('x_908210_raposa_0_diretores');
+            grDirector.addQuery('nome_do_diretor', directorName);
+            grDirector.query();
+ 
+            if (!grDirector.next()) {
+                grDirector.initialize();
+                grDirector.nome_do_diretor = directorName;
+                grDirector.filme = current.sys_id; // Primeiro filme para este diretor
+                grDirector.insert();
+            } else {
+                // Verificar se o filme já está na lista
+                var moviesList2 = grDirector.filme ? grDirector.filme.split(',') : [];
+                if (moviesList2.indexOf(current.sys_id) === -1) {
+                    moviesList2.push(current.sys_id);
+                    grDirector.filme = moviesList2.join(',');
+                    grDirector.update();
+                }
+            }
+        }
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-10 16:22:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8a22eeb1931702100d6eb4897bba109d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Dir e ator</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_script_8a22eeb1931702100d6eb4897bba109d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-19 15:51:51</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8a22eeb1931702100d6eb4897bba109d"/>
+</record_update>

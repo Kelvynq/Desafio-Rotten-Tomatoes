@@ -1,0 +1,2117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=11151000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description>Controle sobre como os filmes estão sendo avaliados. </description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>aprovao_das_avaliaes_dos_filmes</internal_name>
+        <label_cache>[{"name":"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"19787552-b966-4fcc-a51e-54cffd7baa0b":["condition"],"e954c957-3a8a-4f94-8596-e59e15a6a3ec":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.approval","label":"Trigger - Service Catalog➛Requested Item Record➛Approval","reference":"","reference_display":"Approval","type":"choice","base_type":"choice","parent_table_name":"sc_req_item","column_name":"approval","choices":[{"label":"Not Yet Requested","image":"","used":false,"rawLabel":"Not Yet Requested","selected":false,"missing":false,"reference":false,"value":"not requested","parameters":{"name":"task"}},{"label":"Requested","image":"","used":false,"rawLabel":"Requested","selected":false,"missing":false,"reference":false,"value":"requested","parameters":{"name":"task"}},{"label":"Approved","image":"","used":false,"rawLabel":"Approved","selected":false,"missing":false,"reference":false,"value":"approved","parameters":{"name":"task"}},{"label":"Rejected","image":"","used":false,"rawLabel":"Rejected","selected":false,"missing":false,"reference":false,"value":"rejected","parameters":{"name":"task"}}],"usedInstances":{}},{"name":"f05a4f9d-4fef-42fb-9afa-9810d94273e9.record.approval","label":"2 - Update Record➛Requested Item Record➛Approval","reference":"","reference_display":"Approval","type":"choice","base_type":"choice","parent_table_name":"sc_req_item","column_name":"approval","choices":[{"label":"Not Yet Requested","image":"","used":false,"rawLabel":"Not Yet Requested","selected":false,"missing":false,"reference":false,"value":"not requested","parameters":{"name":"task"}},{"label":"Requested","image":"","used":false,"rawLabel":"Requested","selected":false,"missing":false,"reference":false,"value":"requested","parameters":{"name":"task"}},{"label":"Approved","image":"","used":false,"rawLabel":"Approved","selected":false,"missing":false,"reference":false,"value":"approved","parameters":{"name":"task"}},{"label":"Rejected","image":"","used":false,"rawLabel":"Rejected","selected":false,"missing":false,"reference":false,"value":"rejected","parameters":{"name":"task"}}],"usedInstances":{}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"32b11ad4-d1d9-4a98-811a-8d048dcaff3c":["requested_item"],"413f41d8-1f9f-482f-bd3b-eb0549a421f7":["parent"],"41652e68-4e77-495e-8e06-e05446c29038":["conditions"],"f05a4f9d-4fef-42fb-9afa-9810d94273e9":["record"],"55c6acee-8029-40ef-9352-cc719d5e1bb9":["record"],"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e":["record"],"eda6b8e7-7ec6-4cfd-abce-649d5ae06030":["record"]},"attributes":{"default_search_field":"number"}},{"name":"Service Catalog_1.table_name","label":"Trigger - Service Catalog➛Table Name","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"f05a4f9d-4fef-42fb-9afa-9810d94273e9.record","label":"2 - Update Record➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item Record","type":"reference","base_type":"reference","usedInstances":{"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e":["record"],"55c6acee-8029-40ef-9352-cc719d5e1bb9":["record"],"9abec207-39c0-4fd3-802d-97bf0c0a0ca6":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.278e84b5930302100d6eb4897bba1042}}","label":"Administradores de Filmes","reference":"sys_user_group","type":"reference","base_type":"reference","usedInstances":{"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e":["approval_conditions"]}},{"name":"{{static.477a05d153013010b846ddeeff7b1225}}","label":"App Engine Admins","reference":"sys_user_group","type":"reference","base_type":"reference","usedInstances":{"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e":["approval_conditions"]}}]</label_cache>
+        <master_snapshot>62162814931f42100d6eb4897bba102b</master_snapshot>
+        <name>Aprovação das avaliações dos filmes </name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>be162814931f42100d6eb4897bba109f</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 14:11:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fd37509093db42100d6eb4897bba1033</sys_id>
+        <sys_mod_count>57</sys_mod_count>
+        <sys_name>Aprovação das avaliações dos filmes </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_hub_flow_fd37509093db42100d6eb4897bba1033</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=fd37509093db42100d6eb4897bba1033"/>
+    <sys_variable_value action="delete_multiple" query="document_key=fd37509093db42100d6eb4897bba1033"/>
+    <sys_flow_catalog_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <catalog_item/>
+        <name/>
+        <run_flow_in/>
+        <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>be162814931f42100d6eb4897bba109f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:19:13</sys_updated_on>
+    </sys_flow_catalog_trigger>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=fd37509093db42100d6eb4897bba1033"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=fd37509093db42100d6eb4897bba1033^sys_idNOT INdc642490931f42100d6eb4897bba1055"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:09:11</sys_created_on>
+        <sys_id>dc642490931f42100d6eb4897bba1055</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dc642490931f42100d6eb4897bba1055"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=fd37509093db42100d6eb4897bba1033"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=fd37509093db42100d6eb4897bba1033^sys_idNOT IN7137509093db42100d6eb4897bba1037"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>fd37509093db42100d6eb4897bba1033</id>
+        <name>Aprovação das avaliações dos filmes </name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 14:11:40</sys_created_on>
+        <sys_id>7137509093db42100d6eb4897bba1037</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 14:11:40</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7137509093db42100d6eb4897bba1037"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=fd37509093db42100d6eb4897bba1033^sys_idNOT IN1c642490931f42100d6eb4897bba100f,9864201493db42100d6eb4897bba101f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</model>
+        <model_id>fd37509093db42100d6eb4897bba1033</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fd37509093db42100d6eb4897bba1033</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:09:11</sys_created_on>
+        <sys_id>1c642490931f42100d6eb4897bba100f</sys_id>
+        <sys_mod_count>65</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1c642490931f42100d6eb4897bba100f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</model>
+        <model_id>fd37509093db42100d6eb4897bba1033</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fd37509093db42100d6eb4897bba1033</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:09:10</sys_created_on>
+        <sys_id>9864201493db42100d6eb4897bba101f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 19:11:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9864201493db42100d6eb4897bba101f"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=fd37509093db42100d6eb4897bba1033"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fd37509093db42100d6eb4897bba1033"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=fd37509093db42100d6eb4897bba1033^sys_idNOT IN43e8ec18931f42100d6eb4897bba1005,52fb605c931f42100d6eb4897bba10dc,5c1becd8931f42100d6eb4897bba1032,74066414931f42100d6eb4897bba10d9,dfa9a098931f42100d6eb4897bba1072"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:01</sys_created_on>
+        <sys_id>43e8ec18931f42100d6eb4897bba1005</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>f05a4f9d-4fef-42fb-9afa-9810d94273e9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=43e8ec18931f42100d6eb4897bba1005"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>43e8ec18931f42100d6eb4897bba1005</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:01</sys_created_on>
+        <sys_id>0be8ec18931f42100d6eb4897bba1007</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 19:11:12</sys_updated_on>
+        <value>stage=waiting_for_approval^state=-5^comments=Avaliação em espera.^assignment_group={"display":"Administradores de Filmes","value":"278e84b5930302100d6eb4897bba1042","sys_id":"278e84b5930302100d6eb4897bba1042"}</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>43e8ec18931f42100d6eb4897bba1005</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:01</sys_created_on>
+        <sys_id>cfe8ec18931f42100d6eb4897bba1007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:29:01</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=43e8ec18931f42100d6eb4897bba1005"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>43e8ec18931f42100d6eb4897bba1005</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:01</sys_created_on>
+        <sys_id>87e8ec18931f42100d6eb4897bba1007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:29:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>43e8ec18931f42100d6eb4897bba1005</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:01</sys_created_on>
+        <sys_id>0fe8ec18931f42100d6eb4897bba1006</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:29:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>43e8ec18931f42100d6eb4897bba1005</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:01</sys_created_on>
+        <sys_id>c3e8ec18931f42100d6eb4897bba1007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:29:01</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=43e8ec18931f42100d6eb4897bba1005"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=43e8ec18931f42100d6eb4897bba1005"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>e954c957-3a8a-4f94-8596-e59e15a6a3ec</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:42:21</sys_created_on>
+        <sys_id>52fb605c931f42100d6eb4897bba10dc</sys_id>
+        <sys_mod_count>54</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>9abec207-39c0-4fd3-802d-97bf0c0a0ca6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=52fb605c931f42100d6eb4897bba10dc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>52fb605c931f42100d6eb4897bba10dc</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:42:21</sys_created_on>
+        <sys_id>5efb605c931f42100d6eb4897bba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:42:21</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>52fb605c931f42100d6eb4897bba10dc</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:42:21</sys_created_on>
+        <sys_id>9afb605c931f42100d6eb4897bba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:42:21</sys_updated_on>
+        <value>stage=Request Cancelled^state=4^comments=Avaliação rejeitada.</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=52fb605c931f42100d6eb4897bba10dc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>52fb605c931f42100d6eb4897bba10dc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:42:21</sys_created_on>
+        <sys_id>1afb605c931f42100d6eb4897bba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:42:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{f05a4f9d-4fef-42fb-9afa-9810d94273e9.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>52fb605c931f42100d6eb4897bba10dc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:42:21</sys_created_on>
+        <sys_id>92fb605c931f42100d6eb4897bba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:42:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>52fb605c931f42100d6eb4897bba10dc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:42:21</sys_created_on>
+        <sys_id>56fb605c931f42100d6eb4897bba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:42:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=52fb605c931f42100d6eb4897bba10dc"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=52fb605c931f42100d6eb4897bba10dc"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>19787552-b966-4fcc-a51e-54cffd7baa0b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>5c1becd8931f42100d6eb4897bba1032</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>55c6acee-8029-40ef-9352-cc719d5e1bb9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5c1becd8931f42100d6eb4897bba1032"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5c1becd8931f42100d6eb4897bba1032</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>5c1becd8931f42100d6eb4897bba1034</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:38:23</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5c1becd8931f42100d6eb4897bba1032</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>981becd8931f42100d6eb4897bba1034</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:42:21</sys_updated_on>
+        <value>state=3^stage=Request approved^comments=Avaliação aprovada</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5c1becd8931f42100d6eb4897bba1032"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>5c1becd8931f42100d6eb4897bba1032</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>181becd8931f42100d6eb4897bba1034</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:48:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>5c1becd8931f42100d6eb4897bba1032</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>901becd8931f42100d6eb4897bba1034</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:38:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>5c1becd8931f42100d6eb4897bba1032</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>541becd8931f42100d6eb4897bba1034</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:38:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5c1becd8931f42100d6eb4897bba1032"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5c1becd8931f42100d6eb4897bba1032"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:18</sys_created_on>
+        <sys_id>74066414931f42100d6eb4897bba10d9</sys_id>
+        <sys_mod_count>78</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>32b11ad4-d1d9-4a98-811a-8d048dcaff3c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=74066414931f42100d6eb4897bba10d9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>74066414931f42100d6eb4897bba10d9</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:18</sys_created_on>
+        <sys_id>78066414931f42100d6eb4897bba10db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:18</sys_updated_on>
+        <value>916efc07934702100d6eb4897bba1060:item_option_new,7ecef447934702100d6eb4897bba10af:item_option_new,1e0f7c47934702100d6eb4897bba1031:item_option_new,e72f3087934702100d6eb4897bba10ec:item_option_new,de5f7487934702100d6eb4897bba100d:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>74066414931f42100d6eb4897bba10d9</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:18</sys_created_on>
+        <sys_id>b0066414931f42100d6eb4897bba10dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:18</sys_updated_on>
+        <value>d2edf007934702100d6eb4897bba1090</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=74066414931f42100d6eb4897bba10d9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>74066414931f42100d6eb4897bba10d9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:18</sys_created_on>
+        <sys_id>3c066414931f42100d6eb4897bba10da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>74066414931f42100d6eb4897bba10d9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:18</sys_created_on>
+        <sys_id>f4066414931f42100d6eb4897bba10db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>74066414931f42100d6eb4897bba10d9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:18</sys_created_on>
+        <sys_id>34066414931f42100d6eb4897bba10db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=74066414931f42100d6eb4897bba10d9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=74066414931f42100d6eb4897bba10d9"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>dfa9a098931f42100d6eb4897bba1072</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dfa9a098931f42100d6eb4897bba1072"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dfa9a098931f42100d6eb4897bba1072</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>1fa9a098931f42100d6eb4897bba1076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dfa9a098931f42100d6eb4897bba1072</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>57a9a098931f42100d6eb4897bba1076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dfa9a098931f42100d6eb4897bba1072</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>93a9a098931f42100d6eb4897bba1077</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dfa9a098931f42100d6eb4897bba1072</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>dfa9a098931f42100d6eb4897bba1076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=dfa9a098931f42100d6eb4897bba1072"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>dfa9a098931f42100d6eb4897bba1072</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>13a9a098931f42100d6eb4897bba1076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesRejectsAnyG[{{static.278e84b5930302100d6eb4897bba1042}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>dfa9a098931f42100d6eb4897bba1072</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>13a9a098931f42100d6eb4897bba1075</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>dfa9a098931f42100d6eb4897bba1072</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>5fa9a098931f42100d6eb4897bba1075</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>dfa9a098931f42100d6eb4897bba1072</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>d7a9a098931f42100d6eb4897bba1075</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>dfa9a098931f42100d6eb4897bba1072</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>9ba9a098931f42100d6eb4897bba1075</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:52:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>dfa9a098931f42100d6eb4897bba1072</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:32:19</sys_created_on>
+        <sys_id>d3a9a098931f42100d6eb4897bba1076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:32:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dfa9a098931f42100d6eb4897bba1072"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dfa9a098931f42100d6eb4897bba1072"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=fd37509093db42100d6eb4897bba1033"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=fd37509093db42100d6eb4897bba1033^sys_idNOT IN541becd8931f42100d6eb4897bba1038,981becd8931f42100d6eb4897bba1035,d81becd8931f42100d6eb4897bba1029,defb605c931f42100d6eb4897bba10ea"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9c1becd8931f42100d6eb4897bba1037</block>
+        <comment/>
+        <connected_to>19787552-b966-4fcc-a51e-54cffd7baa0b</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>541becd8931f42100d6eb4897bba1038</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>e954c957-3a8a-4f94-8596-e59e15a6a3ec</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=541becd8931f42100d6eb4897bba1038"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>541becd8931f42100d6eb4897bba1038</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:24</sys_created_on>
+        <sys_id>581becd8931f42100d6eb4897bba103b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:38:24</sys_updated_on>
+        <value>Rejeitado</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=541becd8931f42100d6eb4897bba1038"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>541becd8931f42100d6eb4897bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:24</sys_created_on>
+        <sys_id>d41becd8931f42100d6eb4897bba103b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:26</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e.approval_state}}=rejected</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>541becd8931f42100d6eb4897bba1038</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:24</sys_created_on>
+        <sys_id>141becd8931f42100d6eb4897bba103b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:38:24</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=541becd8931f42100d6eb4897bba1038"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=541becd8931f42100d6eb4897bba1038"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d01becd8931f42100d6eb4897bba1035</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>19787552-b966-4fcc-a51e-54cffd7baa0b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>981becd8931f42100d6eb4897bba1035</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>d9b32e36-c4ba-47f6-9277-679501435e69</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=981becd8931f42100d6eb4897bba1035"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=981becd8931f42100d6eb4897bba1035"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=981becd8931f42100d6eb4897bba1035"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">dc1becd8931f42100d6eb4897bba1028</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>d81becd8931f42100d6eb4897bba1029</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>19787552-b966-4fcc-a51e-54cffd7baa0b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d81becd8931f42100d6eb4897bba1029"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d81becd8931f42100d6eb4897bba1029</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>5c1becd8931f42100d6eb4897bba102d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:38:23</sys_updated_on>
+        <value>Aprovado</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d81becd8931f42100d6eb4897bba1029"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>d81becd8931f42100d6eb4897bba1029</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>d81becd8931f42100d6eb4897bba102d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:13:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>d81becd8931f42100d6eb4897bba1029</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:38:23</sys_created_on>
+        <sys_id>181becd8931f42100d6eb4897bba102d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:38:23</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d81becd8931f42100d6eb4897bba1029"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d81becd8931f42100d6eb4897bba1029"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">1afb605c931f42100d6eb4897bba10ea</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>e954c957-3a8a-4f94-8596-e59e15a6a3ec</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:42:21</sys_created_on>
+        <sys_id>defb605c931f42100d6eb4897bba10ea</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 21:23:14</sys_updated_on>
+        <ui_id>a5bb303f-7d74-47a6-9c79-d2f4aba58d14</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=defb605c931f42100d6eb4897bba10ea"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=defb605c931f42100d6eb4897bba10ea"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=defb605c931f42100d6eb4897bba10ea"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=fd37509093db42100d6eb4897bba1033"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=fd37509093db42100d6eb4897bba1033"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_fd37509093db42100d6eb4897bba1033^sys_idNOT IN54642490931f42100d6eb4897bba100e,90642490931f42100d6eb4897bba1014"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fd37509093db42100d6eb4897bba1033</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:09:10</sys_created_on>
+        <sys_id>54642490931f42100d6eb4897bba100e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:09:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fd37509093db42100d6eb4897bba1033</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:09:11</sys_created_on>
+        <sys_id>90642490931f42100d6eb4897bba1014</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:09:11</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_fd37509093db42100d6eb4897bba1033"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_fd37509093db42100d6eb4897bba1033"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_fd37509093db42100d6eb4897bba1033"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>25000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description>Controle sobre como os filmes estão sendo avaliados. </description>
+        <flow_priority/>
+        <internal_name>aprovao_das_avaliaes_dos_filmes</internal_name>
+        <label_cache>[{"name":"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"19787552-b966-4fcc-a51e-54cffd7baa0b":["condition"],"e954c957-3a8a-4f94-8596-e59e15a6a3ec":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.approval","label":"Trigger - Service Catalog➛Requested Item Record➛Approval","reference":"","reference_display":"Approval","type":"choice","base_type":"choice","parent_table_name":"sc_req_item","column_name":"approval","choices":[{"used":false,"label":"Not Yet Requested","reference":false,"image":"","missing":false,"rawLabel":"Not Yet Requested","selected":false,"value":"not requested","parameters":{"name":"task"}},{"used":false,"label":"Requested","reference":false,"image":"","missing":false,"rawLabel":"Requested","selected":false,"value":"requested","parameters":{"name":"task"}},{"used":false,"label":"Approved","reference":false,"image":"","missing":false,"rawLabel":"Approved","selected":false,"value":"approved","parameters":{"name":"task"}},{"used":false,"label":"Rejected","reference":false,"image":"","missing":false,"rawLabel":"Rejected","selected":false,"value":"rejected","parameters":{"name":"task"}}],"usedInstances":{}},{"name":"f05a4f9d-4fef-42fb-9afa-9810d94273e9.record.approval","label":"2 - Update Record➛Requested Item Record➛Approval","reference":"","reference_display":"Approval","type":"choice","base_type":"choice","parent_table_name":"sc_req_item","column_name":"approval","choices":[{"used":false,"label":"Not Yet Requested","reference":false,"image":"","missing":false,"rawLabel":"Not Yet Requested","selected":false,"value":"not requested","parameters":{"name":"task"}},{"used":false,"label":"Requested","reference":false,"image":"","missing":false,"rawLabel":"Requested","selected":false,"value":"requested","parameters":{"name":"task"}},{"used":false,"label":"Approved","reference":false,"image":"","missing":false,"rawLabel":"Approved","selected":false,"value":"approved","parameters":{"name":"task"}},{"used":false,"label":"Rejected","reference":false,"image":"","missing":false,"rawLabel":"Rejected","selected":false,"value":"rejected","parameters":{"name":"task"}}],"usedInstances":{}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"32b11ad4-d1d9-4a98-811a-8d048dcaff3c":["requested_item"],"413f41d8-1f9f-482f-bd3b-eb0549a421f7":["parent"],"41652e68-4e77-495e-8e06-e05446c29038":["conditions"],"f05a4f9d-4fef-42fb-9afa-9810d94273e9":["record"],"55c6acee-8029-40ef-9352-cc719d5e1bb9":["record"],"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e":["record"]},"attributes":{"default_search_field":"number"}},{"name":"Service Catalog_1.table_name","label":"Trigger - Service Catalog➛Table Name","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"f05a4f9d-4fef-42fb-9afa-9810d94273e9.record","label":"2 - Update Record➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e":["record"],"55c6acee-8029-40ef-9352-cc719d5e1bb9":["record"],"9abec207-39c0-4fd3-802d-97bf0c0a0ca6":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.278e84b5930302100d6eb4897bba1042}}","label":"Administradores de Filmes","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e":["approval_conditions"]}}]</label_cache>
+        <master>true</master>
+        <name>Aprovação das avaliações dos filmes </name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Aprovação das avaliações dos filmes ">fd37509093db42100d6eb4897bba1033</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>62162814931f42100d6eb4897bba102b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:35</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=62162814931f42100d6eb4897bba102b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=62162814931f42100d6eb4897bba102b"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=62162814931f42100d6eb4897bba102b^sys_idNOT INba162814931f42100d6eb4897bba1083"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_id>ba162814931f42100d6eb4897bba1083</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:36</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ba162814931f42100d6eb4897bba1083"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=62162814931f42100d6eb4897bba102b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=62162814931f42100d6eb4897bba102b^sys_idNOT INe2162814931f42100d6eb4897bba102c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>62162814931f42100d6eb4897bba102b</id>
+        <name>Aprovação das avaliações dos filmes </name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:42</sys_created_on>
+        <sys_id>e2162814931f42100d6eb4897bba102c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=e2162814931f42100d6eb4897bba102c"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=62162814931f42100d6eb4897bba102b^sys_idNOT IN2a162814931f42100d6eb4897bba102d,6e162814931f42100d6eb4897bba1069"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</model>
+        <model_id>62162814931f42100d6eb4897bba102b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_62162814931f42100d6eb4897bba102b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:42</sys_created_on>
+        <sys_id>2a162814931f42100d6eb4897bba102d</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2a162814931f42100d6eb4897bba102d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</model>
+        <model_id>62162814931f42100d6eb4897bba102b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_62162814931f42100d6eb4897bba102b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:42</sys_created_on>
+        <sys_id>6e162814931f42100d6eb4897bba1069</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6e162814931f42100d6eb4897bba1069"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=62162814931f42100d6eb4897bba102b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=62162814931f42100d6eb4897bba102b"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=62162814931f42100d6eb4897bba102b^sys_idNOT IN3c5ce85c931f42100d6eb4897bba10c0,785ce85c931f42100d6eb4897bba10d0,7e162814931f42100d6eb4897bba1079,f45ce85c931f42100d6eb4897bba10ca,fcf82058931f42100d6eb4897bba1077"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>3c5ce85c931f42100d6eb4897bba10c0</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:34</sys_updated_on>
+        <ui_id>3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3c5ce85c931f42100d6eb4897bba10c0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3c5ce85c931f42100d6eb4897bba10c0</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>305ce85c931f42100d6eb4897bba10c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3c5ce85c931f42100d6eb4897bba10c0</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>7c5ce85c931f42100d6eb4897bba10c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3c5ce85c931f42100d6eb4897bba10c0</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>b85ce85c931f42100d6eb4897bba10c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3c5ce85c931f42100d6eb4897bba10c0</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>f45ce85c931f42100d6eb4897bba10c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3c5ce85c931f42100d6eb4897bba10c0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>3c5ce85c931f42100d6eb4897bba10c0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>f85ce85c931f42100d6eb4897bba10c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesRejectsAnyG[{{static.278e84b5930302100d6eb4897bba1042}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>3c5ce85c931f42100d6eb4897bba10c0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>f85ce85c931f42100d6eb4897bba10c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>3c5ce85c931f42100d6eb4897bba10c0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>385ce85c931f42100d6eb4897bba10c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>3c5ce85c931f42100d6eb4897bba10c0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>b05ce85c931f42100d6eb4897bba10c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>3c5ce85c931f42100d6eb4897bba10c0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>745ce85c931f42100d6eb4897bba10c3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 16:00:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>3c5ce85c931f42100d6eb4897bba10c0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:53</sys_created_on>
+        <sys_id>bc5ce85c931f42100d6eb4897bba10c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3c5ce85c931f42100d6eb4897bba10c0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3c5ce85c931f42100d6eb4897bba10c0"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>e954c957-3a8a-4f94-8596-e59e15a6a3ec</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>785ce85c931f42100d6eb4897bba10d0</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:35</sys_updated_on>
+        <ui_id>9abec207-39c0-4fd3-802d-97bf0c0a0ca6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=785ce85c931f42100d6eb4897bba10d0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>785ce85c931f42100d6eb4897bba10d0</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>745ce85c931f42100d6eb4897bba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>785ce85c931f42100d6eb4897bba10d0</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>b05ce85c931f42100d6eb4897bba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <value>stage=Request Cancelled^state=4^comments=Avaliação rejeitada.</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=785ce85c931f42100d6eb4897bba10d0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>785ce85c931f42100d6eb4897bba10d0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>305ce85c931f42100d6eb4897bba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{f05a4f9d-4fef-42fb-9afa-9810d94273e9.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>785ce85c931f42100d6eb4897bba10d0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>b85ce85c931f42100d6eb4897bba10d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>785ce85c931f42100d6eb4897bba10d0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>7c5ce85c931f42100d6eb4897bba10d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=785ce85c931f42100d6eb4897bba10d0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=785ce85c931f42100d6eb4897bba10d0"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_id>7e162814931f42100d6eb4897bba1079</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:34</sys_updated_on>
+        <ui_id>32b11ad4-d1d9-4a98-811a-8d048dcaff3c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7e162814931f42100d6eb4897bba1079"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7e162814931f42100d6eb4897bba1079</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_id>7a162814931f42100d6eb4897bba107b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:43</sys_updated_on>
+        <value>d2edf007934702100d6eb4897bba1090</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>7e162814931f42100d6eb4897bba1079</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_id>b6162814931f42100d6eb4897bba107b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:43</sys_updated_on>
+        <value>916efc07934702100d6eb4897bba1060:item_option_new,7ecef447934702100d6eb4897bba10af:item_option_new,1e0f7c47934702100d6eb4897bba1031:item_option_new,e72f3087934702100d6eb4897bba10ec:item_option_new,de5f7487934702100d6eb4897bba100d:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7e162814931f42100d6eb4897bba1079"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>7e162814931f42100d6eb4897bba1079</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_id>be162814931f42100d6eb4897bba107a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>7e162814931f42100d6eb4897bba1079</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_id>36162814931f42100d6eb4897bba107b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>7e162814931f42100d6eb4897bba1079</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_id>72162814931f42100d6eb4897bba107b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7e162814931f42100d6eb4897bba1079"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7e162814931f42100d6eb4897bba1079"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>19787552-b966-4fcc-a51e-54cffd7baa0b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>f45ce85c931f42100d6eb4897bba10ca</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:34</sys_updated_on>
+        <ui_id>55c6acee-8029-40ef-9352-cc719d5e1bb9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f45ce85c931f42100d6eb4897bba10ca"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f45ce85c931f42100d6eb4897bba10ca</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>305ce85c931f42100d6eb4897bba10cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <value>state=3^stage=Request approved^comments=Avaliação aprovada</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f45ce85c931f42100d6eb4897bba10ca</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>f05ce85c931f42100d6eb4897bba10cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f45ce85c931f42100d6eb4897bba10ca"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>f45ce85c931f42100d6eb4897bba10ca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>bc5ce85c931f42100d6eb4897bba10cb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:49:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>f45ce85c931f42100d6eb4897bba10ca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>385ce85c931f42100d6eb4897bba10cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>f45ce85c931f42100d6eb4897bba10ca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>f85ce85c931f42100d6eb4897bba10cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f45ce85c931f42100d6eb4897bba10ca"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f45ce85c931f42100d6eb4897bba10ca"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:09</sys_created_on>
+        <sys_id>fcf82058931f42100d6eb4897bba1077</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:34</sys_updated_on>
+        <ui_id>f05a4f9d-4fef-42fb-9afa-9810d94273e9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fcf82058931f42100d6eb4897bba1077"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fcf82058931f42100d6eb4897bba1077</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:09</sys_created_on>
+        <sys_id>38f82058931f42100d6eb4897bba1079</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:53</sys_updated_on>
+        <value>stage=waiting_for_approval^state=-5^comments=Avaliação em espera.</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>fcf82058931f42100d6eb4897bba1077</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:09</sys_created_on>
+        <sys_id>f8f82058931f42100d6eb4897bba1079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:29:09</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fcf82058931f42100d6eb4897bba1077"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>fcf82058931f42100d6eb4897bba1077</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:09</sys_created_on>
+        <sys_id>b4f82058931f42100d6eb4897bba1079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:29:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>fcf82058931f42100d6eb4897bba1077</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:09</sys_created_on>
+        <sys_id>30f82058931f42100d6eb4897bba1079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:29:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>fcf82058931f42100d6eb4897bba1077</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:29:09</sys_created_on>
+        <sys_id>f0f82058931f42100d6eb4897bba1079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:29:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fcf82058931f42100d6eb4897bba1077"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fcf82058931f42100d6eb4897bba1077"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=62162814931f42100d6eb4897bba102b"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=62162814931f42100d6eb4897bba102b^sys_idNOT IN495ce85c931f42100d6eb4897bba10da,705ce85c931f42100d6eb4897bba10d3,cd5ce85c931f42100d6eb4897bba10de,f85ce85c931f42100d6eb4897bba10d7"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9c1becd8931f42100d6eb4897bba1037</block>
+        <comment/>
+        <connected_to>19787552-b966-4fcc-a51e-54cffd7baa0b</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>495ce85c931f42100d6eb4897bba10da</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:35</sys_updated_on>
+        <ui_id>e954c957-3a8a-4f94-8596-e59e15a6a3ec</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=495ce85c931f42100d6eb4897bba10da"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>495ce85c931f42100d6eb4897bba10da</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>415ce85c931f42100d6eb4897bba10de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <value>Rejeitado</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=495ce85c931f42100d6eb4897bba10da"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>495ce85c931f42100d6eb4897bba10da</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>cd5ce85c931f42100d6eb4897bba10dd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e.approval_state}}=rejected</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>495ce85c931f42100d6eb4897bba10da</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>0d5ce85c931f42100d6eb4897bba10dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=495ce85c931f42100d6eb4897bba10da"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=495ce85c931f42100d6eb4897bba10da"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">dc1becd8931f42100d6eb4897bba1028</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>705ce85c931f42100d6eb4897bba10d3</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:34</sys_updated_on>
+        <ui_id>19787552-b966-4fcc-a51e-54cffd7baa0b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=705ce85c931f42100d6eb4897bba10d3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>705ce85c931f42100d6eb4897bba10d3</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>7c5ce85c931f42100d6eb4897bba10d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <value>Aprovado</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=705ce85c931f42100d6eb4897bba10d3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>705ce85c931f42100d6eb4897bba10d3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>f85ce85c931f42100d6eb4897bba10d6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:13:51</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{3ddc9c68-6fd2-4dc0-8c4b-b93dd0c79f3e.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>705ce85c931f42100d6eb4897bba10d3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>385ce85c931f42100d6eb4897bba10d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:43:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=705ce85c931f42100d6eb4897bba10d3"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=705ce85c931f42100d6eb4897bba10d3"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">1afb605c931f42100d6eb4897bba10ea</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>e954c957-3a8a-4f94-8596-e59e15a6a3ec</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>cd5ce85c931f42100d6eb4897bba10de</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:35</sys_updated_on>
+        <ui_id>a5bb303f-7d74-47a6-9c79-d2f4aba58d14</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=cd5ce85c931f42100d6eb4897bba10de"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=cd5ce85c931f42100d6eb4897bba10de"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=cd5ce85c931f42100d6eb4897bba10de"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d01becd8931f42100d6eb4897bba1035</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Aprovação das avaliações dos filmes ">62162814931f42100d6eb4897bba102b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>19787552-b966-4fcc-a51e-54cffd7baa0b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:43:54</sys_created_on>
+        <sys_id>f85ce85c931f42100d6eb4897bba10d7</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:35</sys_updated_on>
+        <ui_id>d9b32e36-c4ba-47f6-9277-679501435e69</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=f85ce85c931f42100d6eb4897bba10d7"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=f85ce85c931f42100d6eb4897bba10d7"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f85ce85c931f42100d6eb4897bba10d7"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=62162814931f42100d6eb4897bba102b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=62162814931f42100d6eb4897bba102b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_62162814931f42100d6eb4897bba102b^sys_idNOT IN26162814931f42100d6eb4897bba1066,62162814931f42100d6eb4897bba106e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_62162814931f42100d6eb4897bba102b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:42</sys_created_on>
+        <sys_id>26162814931f42100d6eb4897bba1066</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_62162814931f42100d6eb4897bba102b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:42</sys_created_on>
+        <sys_id>62162814931f42100d6eb4897bba106e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 15:16:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_62162814931f42100d6eb4897bba102b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_62162814931f42100d6eb4897bba102b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_62162814931f42100d6eb4897bba102b"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>fd37509093db42100d6eb4897bba1033</sys_id>
+        <latest_snapshot>62162814931f42100d6eb4897bba102b</latest_snapshot>
+        <compiler_build>glide-washingtondc-12-20-2023__patch3-hotfix1-05-12-2024_05-16-2024_0813.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=fd37509093db42100d6eb4897bba1033^sys_idNOT INb6162814931f42100d6eb4897bba10a0"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"b6162814931f42100d6eb4897bba10a0","name":"plan","plan_signature":null}}</plan>
+        <plan_id>fd37509093db42100d6eb4897bba1033</plan_id>
+        <snapshot>dce18d58939f42100d6eb4897bba1038</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 15:16:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b6162814931f42100d6eb4897bba10a0</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 17:17:36</sys_updated_on>
+        <trigger display_value="">be162814931f42100d6eb4897bba109f</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=fd37509093db42100d6eb4897bba1033"/>
+</record_update>

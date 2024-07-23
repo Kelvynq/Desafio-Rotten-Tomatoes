@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="filme" label="Filme" language="en" table="x_908210_raposa_0_atores">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>filme</element>
+            <help/>
+            <hint/>
+            <label>Filme</label>
+            <language>en</language>
+            <name>x_908210_raposa_0_atores</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-06-27 19:26:25</sys_created_on>
+            <sys_mod_count>7</sys_mod_count>
+            <sys_name>Filme</sys_name>
+            <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+            <sys_update_name>sys_documentation_x_908210_raposa_0_atores_filme_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-10 16:08:43</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

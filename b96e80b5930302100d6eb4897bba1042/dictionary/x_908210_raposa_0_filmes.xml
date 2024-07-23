@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="506150b9930302100d6eb4897bba10bf" label="Filmes" max_length="40" name="x_908210_raposa_0_filmes" text_index="true" type="collection">
+        <element label="Categoria" max_length="40" name="categoria" type="string"/>
+        <element label="Nota IMDB" max_length="40" name="nota_imdb_critica" type="string"/>
+        <element display="true" label="Nome do filme" max_length="500" name="nome_do_filme" type="string"/>
+        <element label="Nome" max_length="40" name="nome" type="string"/>
+        <element label="Nota da Raposa" max_length="40" name="nota_da_raposa" type="string"/>
+        <element choice="1" label="Avaliações" max_length="40" name="avaliacoes" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Neutra" sequence="5" value="2"/>
+                <element inactive_on_update="false" label="Neutra" sequence="1" value="Neutras"/>
+                <element inactive="true" inactive_on_update="true" label="Negativa" sequence="3" value="1"/>
+                <element inactive="true" inactive_on_update="true" label="Positiva" sequence="4" value="3"/>
+                <element inactive_on_update="false" label="Negativa" sequence="0" value="Negativas"/>
+                <element inactive_on_update="false" label="Positiva" sequence="2" value="Positivas"/>
+            </choice>
+        </element>
+        <element label="Sinopse" max_length="1000" name="sinopse" type="string"/>
+        <element label="link" max_length="1000" name="link" read_only="true" type="string"/>
+    </element>
+</database>

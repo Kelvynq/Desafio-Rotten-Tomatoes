@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="DELETE">
+        <can_read>true</can_read>
+        <can_share>false</can_share>
+        <can_write>false</can_write>
+        <dashboard display_value="WS-Filme">4865e9d47b53821054a9f3c0cda69214</dashboard>
+        <group/>
+        <owner>false</owner>
+        <role display_value="x_908210_raposa_0.ControFilm" name="x_908210_raposa_0.ControFilm">527054b5930302100d6eb4897bba109e</role>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 19:53:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>51652dd4935382100d6eb4897bba109a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4865e9d47b53821054a9f3c0cda69214</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>par_dashboard_permission_51652dd4935382100d6eb4897bba109a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 19:53:14</sys_updated_on>
+        <user/>
+    </par_dashboard_permission>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>par_dashboard_permission_51652dd4935382100d6eb4897bba109a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission"><par_dashboard_permission action="INSERT_OR_UPDATE"><can_read>true</can_read><can_share>false</can_share><can_write>false</can_write><dashboard display_value="WS-Filme">4865e9d47b53821054a9f3c0cda69214</dashboard><group/><owner>false</owner><role display_value="x_908210_raposa_0.ControFilm" name="x_908210_raposa_0.ControFilm">527054b5930302100d6eb4897bba109e</role><sys_class_name>par_dashboard_permission</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-05 19:53:14</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>51652dd4935382100d6eb4897bba109a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>4865e9d47b53821054a9f3c0cda69214</sys_name><sys_overrides/><sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>par_dashboard_permission_51652dd4935382100d6eb4897bba109a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-05 19:53:14</sys_updated_on><user/></par_dashboard_permission></record_update>]]></payload>
+        <payload_hash>734300335</payload_hash>
+        <record_name>4865e9d47b53821054a9f3c0cda69214</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 19:53:14</sys_created_on>
+        <sys_id>d1652dd4935382100d6eb4897bba109c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19084753e270000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 19:53:14</sys_updated_on>
+        <type>PAR Dashboard Permission</type>
+        <update_guid>d5652dd4065382104f7fcd2a249aaf9b</update_guid>
+        <update_guid_history>d5652dd4065382104f7fcd2a249aaf9b:734300335</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">2521385a93d382100d6eb4897bba10d8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 21:12:48</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_permission">par_dashboard_permission</sys_db_object>
+        <sys_id>058dbc463f0041b68c12e76ef9239084</sys_id>
+        <sys_metadata>51652dd4935382100d6eb4897bba109a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4865e9d47b53821054a9f3c0cda69214</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>par_dashboard_permission_51652dd4935382100d6eb4897bba109a</sys_update_name>
+        <sys_update_version display_value="par_dashboard_permission_51652dd4935382100d6eb4897bba109a">d1652dd4935382100d6eb4897bba109c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 21:12:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

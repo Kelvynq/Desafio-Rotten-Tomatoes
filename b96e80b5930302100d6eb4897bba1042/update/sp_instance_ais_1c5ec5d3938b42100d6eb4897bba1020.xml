@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_ais">
+    <sp_instance_ais action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <ai_search_source_filter display_value="ESC Portal Catalogs">5b37cc5253e31010069addeeff7b12a6</ai_search_source_filter>
+        <class_name/>
+        <color>default</color>
+        <css>.wrapper-xl {
+    padding: rem !important;
+}
+
+.container ng-scope{
+
+    padding-bottom: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+
+}</css>
+        <disable_all_suggestions>false</disable_all_suggestions>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <placeholder/>
+        <roles/>
+        <search_application display_value="ESC Portal Default Search Application">7296910f53171010069addeeff7b12e7</search_application>
+        <search_results_configuration display_value="ESC Portal Search">9264a1c353571010069addeeff7b121e</search_results_configuration>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b5164d1b934b42100d6eb4897bba108b</sp_column>
+        <sp_widget display_value="Homepage Search - Filme">8049415f934b42100d6eb4897bba1013</sp_widget>
+        <spell_check_font_size>xl</spell_check_font_size>
+        <sys_class_name>sp_instance_ais</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-02 15:38:28</sys_created_on>
+        <sys_id>1c5ec5d3938b42100d6eb4897bba1020</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Como podemos ajudar? </sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_instance_ais_1c5ec5d3938b42100d6eb4897bba1020</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-17 19:35:49</sys_updated_on>
+        <title>Como podemos ajudar? </title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"typeahead_search": {
+		"value": "{title: 'Buscar', size: 'lg', color: '#ffffff'}",
+		"displayValue": "{title: 'Buscar', size: 'lg', color: '#ffffff'}"
+	}
+}]]></widget_parameters>
+    </sp_instance_ais>
+    <sys_translated_text action="delete_multiple" query="documentkey=1c5ec5d3938b42100d6eb4897bba1020"/>
+</record_update>

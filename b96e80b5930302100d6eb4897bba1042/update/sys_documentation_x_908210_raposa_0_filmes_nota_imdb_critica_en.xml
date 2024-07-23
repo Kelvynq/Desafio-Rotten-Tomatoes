@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="nota_imdb_critica" label="Nota IMDB" language="en" table="x_908210_raposa_0_filmes">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>nota_imdb_critica</element>
+            <help/>
+            <hint/>
+            <label>Nota IMDB</label>
+            <language>en</language>
+            <name>x_908210_raposa_0_filmes</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-07-11 18:35:37</sys_created_on>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Nota IMDB</sys_name>
+            <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+            <sys_update_name>sys_documentation_x_908210_raposa_0_filmes_nota_imdb_critica_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-07-11 18:35:37</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

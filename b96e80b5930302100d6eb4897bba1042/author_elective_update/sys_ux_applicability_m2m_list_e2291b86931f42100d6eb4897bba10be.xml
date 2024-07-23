@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_list">
+    <sys_ux_applicability_m2m_list action="DELETE">
+        <active>true</active>
+        <applicability display_value="Audience for app ws-raposa">da291b86931f42100d6eb4897bba103d</applicability>
+        <list/>
+        <order>100</order>
+        <sys_class_name>sys_ux_applicability_m2m_list</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 14:48:23</sys_created_on>
+        <sys_id>e2291b86931f42100d6eb4897bba10be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_ux_applicability_m2m_list_e2291b86931f42100d6eb4897bba10be</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 14:48:23</sys_updated_on>
+    </sys_ux_applicability_m2m_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sys_ux_applicability_m2m_list_e2291b86931f42100d6eb4897bba10be</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_list"><sys_ux_applicability_m2m_list action="INSERT_OR_UPDATE"><active>true</active><applicability display_value="Audience for app ws-raposa">da291b86931f42100d6eb4897bba103d</applicability><list/><order>100</order><sys_class_name>sys_ux_applicability_m2m_list</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-11 14:48:23</sys_created_on><sys_id>e2291b86931f42100d6eb4897bba10be</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sys_ux_applicability_m2m_list_e2291b86931f42100d6eb4897bba10be</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-11 14:48:23</sys_updated_on></sys_ux_applicability_m2m_list></record_update>]]></payload>
+        <payload_hash>1583391114</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 15:35:22</sys_created_on>
+        <sys_id>f2e36746935f42100d6eb4897bba10ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190a26f51680000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 15:35:22</sys_updated_on>
+        <type>List Applicability</type>
+        <update_guid>ae291b86641f4210b78783a1f72328bf</update_guid>
+        <update_guid_history>ae291b86641f4210b78783a1f72328bf:1154104729,ae291b86641f4210b78783a1f72328bf:1154104729</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 15:35:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_applicability_m2m_list">sys_ux_applicability_m2m_list</sys_db_object>
+        <sys_id>a314e65c0ccd498ebb705fb40946d284</sys_id>
+        <sys_metadata>e2291b86931f42100d6eb4897bba10be</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sys_ux_applicability_m2m_list_e2291b86931f42100d6eb4897bba10be</sys_update_name>
+        <sys_update_version display_value="sys_ux_applicability_m2m_list_e2291b86931f42100d6eb4897bba10be">f2e36746935f42100d6eb4897bba10ee</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 15:35:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

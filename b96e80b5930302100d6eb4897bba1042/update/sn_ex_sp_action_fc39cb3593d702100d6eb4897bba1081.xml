@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_ex_sp_action">
+    <sn_ex_sp_action action="INSERT_OR_UPDATE">
+        <action_type display_value="Update">3ad535af772a01105f7439bd1e5a993a</action_type>
+        <active>true</active>
+        <icon/>
+        <name>Atualizar nota</name>
+        <sys_class_name>sn_ex_sp_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-10 19:00:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>fc39cb3593d702100d6eb4897bba1081</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Atualizar nota</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sn_ex_sp_action_fc39cb3593d702100d6eb4897bba1081</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-10 19:00:41</sys_updated_on>
+        <table>x_908210_raposa_0_filmes</table>
+    </sn_ex_sp_action>
+</record_update>

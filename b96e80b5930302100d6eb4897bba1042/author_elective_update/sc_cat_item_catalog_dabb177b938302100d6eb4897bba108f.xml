@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Registrar Filme">8e6b1f3b938302100d6eb4897bba10db</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 15:13:15</sys_created_on>
+        <sys_id>dabb177b938302100d6eb4897bba108f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Registrar Filme</sys_name>
+        <sys_package display_value="Raposa Aí Reviews" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Aí Reviews">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_dabb177b938302100d6eb4897bba108f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 15:13:15</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sc_cat_item_catalog_dabb177b938302100d6eb4897bba108f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="Registrar Filme">8e6b1f3b938302100d6eb4897bba10db</sc_cat_item><sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-04 15:13:15</sys_created_on><sys_id>dabb177b938302100d6eb4897bba108f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Service Catalog.Registrar Filme</sys_name><sys_package display_value="Raposa Aí Reviews" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Aí Reviews">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sc_cat_item_catalog_dabb177b938302100d6eb4897bba108f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-04 15:13:15</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>-483254028</payload_hash>
+        <record_name>Service Catalog.Registrar Filme</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 15:13:15</sys_created_on>
+        <sys_id>52bb177b938302100d6eb4897bba1093</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1907e4e8df60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 15:13:15</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>92bb177bbf83021022302eb3a501f092</update_guid>
+        <update_guid_history>92bb177bbf83021022302eb3a501f092:-483254028</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Service Catalog.Registrar Filme">26fb9b7b938302100d6eb4897bba1048</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 15:14:22</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>41fcf39ca30e475ab3e9936afaeb5d29</sys_id>
+        <sys_metadata>dabb177b938302100d6eb4897bba108f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Catalog.Registrar Filme</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent display_value="Registrar Filme">8e6b1f3b938302100d6eb4897bba10db</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_dabb177b938302100d6eb4897bba108f</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_dabb177b938302100d6eb4897bba108f">52bb177b938302100d6eb4897bba1093</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 15:14:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

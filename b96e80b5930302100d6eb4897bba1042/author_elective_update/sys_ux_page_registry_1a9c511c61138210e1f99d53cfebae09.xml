@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry">
+    <sys_ux_page_registry action="DELETE">
+        <active>true</active>
+        <admin_panel>da9c511c7613821035f7be61b55c1e09</admin_panel>
+        <admin_panel_table>sys_ux_app_config</admin_panel_table>
+        <auth_routes/>
+        <page/>
+        <parent_app display_value="Unified Navigation app shell">c86a62e2c7022010099a308dc7c26022</parent_app>
+        <path>ws-filme</path>
+        <root_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</root_macroponent>
+        <sys_class_name>sys_ux_page_registry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 19:14:49</sys_created_on>
+        <sys_id>1a9c511c61138210e1f99d53cfebae09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS-Filme</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_ux_page_registry_1a9c511c61138210e1f99d53cfebae09</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 19:14:49</sys_updated_on>
+        <title>WS-Filme</title>
+    </sys_ux_page_registry>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sys_ux_page_registry_1a9c511c61138210e1f99d53cfebae09</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry"><sys_ux_page_registry action="INSERT_OR_UPDATE"><active>true</active><admin_panel>da9c511c7613821035f7be61b55c1e09</admin_panel><admin_panel_table>sys_ux_app_config</admin_panel_table><auth_routes/><page/><parent_app display_value="Unified Navigation app shell">c86a62e2c7022010099a308dc7c26022</parent_app><path>ws-filme</path><root_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</root_macroponent><sys_class_name>sys_ux_page_registry</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-05 19:14:49</sys_created_on><sys_id>1a9c511c61138210e1f99d53cfebae09</sys_id><sys_mod_count>0</sys_mod_count><sys_name>WS-Filme</sys_name><sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sys_ux_page_registry_1a9c511c61138210e1f99d53cfebae09</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-05 19:14:49</sys_updated_on><title>WS-Filme</title></sys_ux_page_registry></record_update>]]></payload>
+        <payload_hash>1830231414</payload_hash>
+        <record_name>WS-Filme</record_name>
+        <reverted_from/>
+        <source>b6da1912932202100d6eb4897bba1014</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2024-06-04 17:27:57</sys_created_on>
+        <sys_id>ed2565d4935382100d6eb4897bba1024</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18fe44b15480000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Application</type>
+        <update_guid>ad2565d465538210a6fee2a27aac5b24</update_guid>
+        <update_guid_history>ad2565d465538210a6fee2a27aac5b24:1830231414</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 19:52:11</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_page_registry">sys_ux_page_registry</sys_db_object>
+        <sys_id>863f7af5be9d4260b0c5e17aab59b7b9</sys_id>
+        <sys_metadata>1a9c511c61138210e1f99d53cfebae09</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WS-Filme</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sys_ux_page_registry_1a9c511c61138210e1f99d53cfebae09</sys_update_name>
+        <sys_update_version display_value="sys_ux_page_registry_1a9c511c61138210e1f99d53cfebae09">ed2565d4935382100d6eb4897bba1024</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 19:52:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

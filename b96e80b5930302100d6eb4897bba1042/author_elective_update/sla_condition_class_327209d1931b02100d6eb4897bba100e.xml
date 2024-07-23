@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sla_condition_class">
+    <sla_condition_class action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <name>n</name>
+        <sys_class_name>sla_condition_class</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-08 19:54:44</sys_created_on>
+        <sys_id>327209d1931b02100d6eb4897bba100e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>n</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sla_condition_class_327209d1931b02100d6eb4897bba100e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-08 19:54:44</sys_updated_on>
+    </sla_condition_class>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sla_condition_class_327209d1931b02100d6eb4897bba100e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sla_condition_class"><sla_condition_class action="INSERT_OR_UPDATE"><active>true</active><class_name/><name>n</name><sys_class_name>sla_condition_class</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-08 19:54:44</sys_created_on><sys_id>327209d1931b02100d6eb4897bba100e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>n</sys_name><sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sla_condition_class_327209d1931b02100d6eb4897bba100e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-08 19:54:44</sys_updated_on></sla_condition_class></record_update>]]></payload>
+        <payload_hash>-1791886946</payload_hash>
+        <record_name>n</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-08 19:54:44</sys_created_on>
+        <sys_id>ac82c111931b02100d6eb4897bba10a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19093e9aff40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-08 19:54:44</sys_updated_on>
+        <type>SLA Conditions</type>
+        <update_guid>a082c1119e1b021059a9b4ae32d755a5</update_guid>
+        <update_guid_history>a082c1119e1b021059a9b4ae32d755a5:-1791886946</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="n">ab8249d1931b02100d6eb4897bba1001</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-08 19:54:57</sys_created_on>
+        <sys_db_object display_value="" name="sla_condition_class">sla_condition_class</sys_db_object>
+        <sys_id>48b4a7beb9524d4c9d7c0b76c71ccfc1</sys_id>
+        <sys_metadata>327209d1931b02100d6eb4897bba100e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>n</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sla_condition_class_327209d1931b02100d6eb4897bba100e</sys_update_name>
+        <sys_update_version display_value="sla_condition_class_327209d1931b02100d6eb4897bba100e">ac82c111931b02100d6eb4897bba10a5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-08 19:54:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.footer {&#13;
+  background-color: #333;&#13;
+  color: #fff;&#13;
+  padding: 20px 0;&#13;
+  text-align: center;&#13;
+  position: ;&#13;
+  width: 100%;&#13;
+  bottom: 0;&#13;
+}&#13;
+&#13;
+.footer .container {&#13;
+  max-width: 1200px;&#13;
+  margin: 0 auto;&#13;
+  padding: 0 15px;&#13;
+}&#13;
+&#13;
+.footer a {&#13;
+  color: #ff9800;&#13;
+  text-decoration: none;&#13;
+}&#13;
+&#13;
+.footer a:hover {&#13;
+  text-decoration: underline;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Footer Filme</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 19:30:09</sys_created_on>
+        <sys_id>6e890af7935382100d6eb4897bba10bd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Footer Filme</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_header_footer_6e890af7935382100d6eb4897bba10bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 19:33:49</sys_updated_on>
+        <template><![CDATA[<footer class="footer">
+  <div class="container">
+    <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    <p>Endereço: Rua Exemplo, 123 - Cidade, Estado, País</p>
+    <p>Contato: <a href="mailto:contato@suaempresa.com">contato@suaempresa.com</a></p>
+  </div>
+</footer>]]></template>
+    </sp_header_footer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sp_header_footer_6e890af7935382100d6eb4897bba10bd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_header_footer"&gt;&lt;sp_header_footer action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.footer {&amp;#13;
+  background-color: #333;&amp;#13;
+  color: #fff;&amp;#13;
+  padding: 20px 0;&amp;#13;
+  text-align: center;&amp;#13;
+  position: ;&amp;#13;
+  width: 100%;&amp;#13;
+  bottom: 0;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.footer .container {&amp;#13;
+  max-width: 1200px;&amp;#13;
+  margin: 0 auto;&amp;#13;
+  padding: 0 15px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.footer a {&amp;#13;
+  color: #ff9800;&amp;#13;
+  text-decoration: none;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.footer a:hover {&amp;#13;
+  text-decoration: underline;&amp;#13;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]&gt;&lt;/link&gt;&lt;name&gt;Footer Filme&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;static&gt;false&lt;/static&gt;&lt;sys_class_name&gt;sp_header_footer&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-07-16 19:30:09&lt;/sys_created_on&gt;&lt;sys_id&gt;6e890af7935382100d6eb4897bba10bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;Footer Filme&lt;/sys_name&gt;&lt;sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Raposa Carrossel"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_header_footer_6e890af7935382100d6eb4897bba10bd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-07-16 19:33:49&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;footer class="footer"&gt;
+  &lt;div class="container"&gt;
+    &lt;p&gt;&amp;copy; 2024 Sua Empresa. Todos os direitos reservados.&lt;/p&gt;
+    &lt;p&gt;Endereço: Rua Exemplo, 123 - Cidade, Estado, País&lt;/p&gt;
+    &lt;p&gt;Contato: &lt;a href="mailto:contato@suaempresa.com"&gt;contato@suaempresa.com&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;]]&gt;&lt;/template&gt;&lt;/sp_header_footer&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1928972650</payload_hash>
+        <record_name>Footer Filme</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 19:33:49</sys_created_on>
+        <sys_id>ac7a4a3b935382100d6eb4897bba106f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190bd096d230000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 19:33:49</sys_updated_on>
+        <type>Header | Footer</type>
+        <update_guid>647a4a3bfe538210c1b440455d7e7a6f</update_guid>
+        <update_guid_history>647a4a3bfe538210c1b440455d7e7a6f:1928972650,a86ac63b085382104aac2a588cbbf3b5:442605514,a14ac63bdc538210e1067108071ea02a:347599594,f3d902f73d538210f83b48af0a9077ee:273149935,b69902f70a5382106b856aebd50ac8e9:-1576116129</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Footer Filme">578a0e3b935382100d6eb4897bba10fa</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 19:34:17</sys_created_on>
+        <sys_db_object display_value="" name="sp_header_footer">sp_header_footer</sys_db_object>
+        <sys_id>0ca3b02262874c9887ecc0a16663d5c4</sys_id>
+        <sys_metadata>6e890af7935382100d6eb4897bba10bd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Footer Filme</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sp_header_footer_6e890af7935382100d6eb4897bba10bd</sys_update_name>
+        <sys_update_version display_value="sp_header_footer_6e890af7935382100d6eb4897bba10bd">ac7a4a3b935382100d6eb4897bba106f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 19:34:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>6</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b5164d1b934b42100d6eb4897bba108b</sp_column>
+        <sp_widget display_value="Performance Analytics">70a4b9396773220032468aaad485ef4b</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 21:50:46</sys_created_on>
+        <sys_id>6ec9eefb93d382100d6eb4897bba1091</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_instance_6ec9eefb93d382100d6eb4897bba1091</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 21:59:56</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"widget_id": {
+		"value": "d9aea2bbb33003003e5362ff86a8dcc0",
+		"displayValue": "Top 10 Report Tables"
+	},
+	"show_title": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=6ec9eefb93d382100d6eb4897bba1091"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sp_instance_6ec9eefb93d382100d6eb4897bba1091</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;6&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;b5164d1b934b42100d6eb4897bba108b&lt;/sp_column&gt;&lt;sp_widget display_value="Performance Analytics"&gt;70a4b9396773220032468aaad485ef4b&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-07-16 21:50:46&lt;/sys_created_on&gt;&lt;sys_id&gt;6ec9eefb93d382100d6eb4897bba1091&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Raposa Carrossel"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_6ec9eefb93d382100d6eb4897bba1091&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-07-16 21:59:56&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"widget_id": {
+		"value": "d9aea2bbb33003003e5362ff86a8dcc0",
+		"displayValue": "Top 10 Report Tables"
+	},
+	"show_title": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=6ec9eefb93d382100d6eb4897bba1091"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-325088055</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 21:59:56</sys_created_on>
+        <sys_id>78eb26f3931782100d6eb4897bba1024</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190bd8f308c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 21:59:56</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>30eb26f33f1782107c962f2b555bfd24</update_guid>
+        <update_guid_history>30eb26f33f1782107c962f2b555bfd24:-325088055,a0dbaab3a717821029b21aea83fa671a:1268238442,dbbb22f374178210fabdacf46b35f9cc:756783115,b0bb6eb397178210cc4c536a0a5b8971:-1808530966,8b9b6eb3091782105eab70d65194a0f8:1247670421,22c9e633ad1782107337fe3212549d0b:2048737782</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">f90caeb3931782100d6eb4897bba1079</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 22:00:34</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>c73ba9433fb54ea4ab8e3be7f5f69a44</sys_id>
+        <sys_metadata>6ec9eefb93d382100d6eb4897bba1091</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sp_instance_6ec9eefb93d382100d6eb4897bba1091</sys_update_name>
+        <sys_update_version display_value="sp_instance_6ec9eefb93d382100d6eb4897bba1091">78eb26f3931782100d6eb4897bba1024</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 22:00:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

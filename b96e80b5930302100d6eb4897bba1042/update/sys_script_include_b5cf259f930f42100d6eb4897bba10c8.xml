@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_908210_raposa_0.OMDBsi</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>OMDBsi</name>
+        <script><![CDATA[var OMDBsi = Class.create();
+OMDBsi.prototype = Object.extendsObject(global.AbstractAjaxProcessor,{
+   
+    getMovie: function() {
+        try {
+ 
+            var parametro = this.getParameter('sysparm_movie');
+			var movieName = parametro.replace(/\+/g,' '); // Substituir '+' por espaços para comparação
+
+			// Verificar se o filme já existe na tabela de filmes
+            var grMovie = new GlideRecord('x_908210_raposa_0_filmes');
+            grMovie.addQuery('nome_do_filme', movieName);
+            grMovie.query();
+
+			if (grMovie.next()) {
+                return JSON.stringify({ exists: true });
+            }
+
+			// Se o filme não existir, chamar a API OMDb
+            var r = new sn_ws.RESTMessageV2('x_908210_raposa_0.OMDBapi', 'GetMovie');
+            r.setStringParameter('movie_name', parametro); // movie_name -> parametro Rest
+            r.setStringParameterNoEscape('url', 'http://www.omdbapi.com/');
+            r.setStringParameterNoEscape('omdb_api_key', '6af5cc6d');
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+
+            if (httpStatus == '200') {
+                return JSON.stringify({ exists: false, data: responseBody });
+            } else {
+                gs.log("Erro integração OMDb: " + response.getErrorMessage());
+                return JSON.stringify({ exists: false, error: "Erro na integração OMDb" });
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.log("Exceção na integração OMDb: " + message);
+            return JSON.stringify({ exists: false, error: message });
+        }
+    },
+
+	getImageUrl: function(titulo) { 
+        titulo = titulo || this.getParameter("sysparm_movie");  //Define o parâmetro titulo.  utiliza o parâmetro sysparm_movie da requisição.
+        var img = ''; 
+        var data = this.getMovie(titulo); 
+        if (data) { 
+            var parsed = JSON.parse(data); //Converte data de JSON para um objeto JavaScript
+            img += parsed.Poster; 
+            return img; 
+        } 
+    }, 
+    type: 'OMDbUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-02 18:08:28</sys_created_on>
+        <sys_id>b5cf259f930f42100d6eb4897bba10c8</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>OMDBsi</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sys_script_include_b5cf259f930f42100d6eb4897bba10c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-19 00:12:03</sys_updated_on>
+    </sys_script_include>
+</record_update>

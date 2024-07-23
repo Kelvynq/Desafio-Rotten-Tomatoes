@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>6</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b5164d1b934b42100d6eb4897bba108b</sp_column>
+        <sp_widget display_value="Relevant for you">6cc836d0dbf700500c209493db961914</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-02 15:02:31</sys_created_on>
+        <sys_id>bd164d1b934b42100d6eb4897bba1092</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_instance_bd164d1b934b42100d6eb4897bba1092</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 14:53:10</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"user_prediction_count": {
+		"value": null,
+		"displayValue": ""
+	},
+	"recent_activity_cut_off_in_days": {
+		"value": null,
+		"displayValue": ""
+	},
+	"title": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit": {
+		"value": 3,
+		"displayValue": "3"
+	},
+	"category": {
+		"value": "knowledge and catalog",
+		"displayValue": "knowledge and catalog"
+	},
+	"list_type": {
+		"value": "Card List",
+		"displayValue": "Card List"
+	},
+	"card_behaviour": {
+		"value": "single",
+		"displayValue": "single"
+	},
+	"load_config": {
+		"value": "async",
+		"displayValue": "Asynchronous"
+	},
+	"show_empty_state": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=bd164d1b934b42100d6eb4897bba1092"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sp_instance_bd164d1b934b42100d6eb4897bba1092</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;6&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;b5164d1b934b42100d6eb4897bba108b&lt;/sp_column&gt;&lt;sp_widget display_value="Relevant for you"&gt;6cc836d0dbf700500c209493db961914&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-07-02 15:02:31&lt;/sys_created_on&gt;&lt;sys_id&gt;bd164d1b934b42100d6eb4897bba1092&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Raposa Carrossel"&gt;b96e80b5930302100d6eb4897bba1042&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_bd164d1b934b42100d6eb4897bba1092&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-07-16 14:53:10&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"user_prediction_count": {
+		"value": null,
+		"displayValue": ""
+	},
+	"recent_activity_cut_off_in_days": {
+		"value": null,
+		"displayValue": ""
+	},
+	"title": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit": {
+		"value": 3,
+		"displayValue": "3"
+	},
+	"category": {
+		"value": "knowledge and catalog",
+		"displayValue": "knowledge and catalog"
+	},
+	"list_type": {
+		"value": "Card List",
+		"displayValue": "Card List"
+	},
+	"card_behaviour": {
+		"value": "single",
+		"displayValue": "single"
+	},
+	"load_config": {
+		"value": "async",
+		"displayValue": "Asynchronous"
+	},
+	"show_empty_state": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=bd164d1b934b42100d6eb4897bba1092"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-430123983</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 14:53:10</sys_created_on>
+        <sys_id>553a0177931f42100d6eb4897bba10b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190bc0878ce0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 14:53:10</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>1d3a0177291f42106f2367e1712e70b5</update_guid>
+        <update_guid_history>1d3a0177291f42106f2367e1712e70b5:-430123983,dc898137361f4210b4a0e1b7e37b3766:-1066844846,f16901370b1f4210a5df605604d84c24:-1703565709,d06e74b762db4210547c689256d05b3a:-1066844846,0afd3c7726db4210a69208dd803243a3:-430123983,cae8096bbd1b021052129d76cfff335e:-1066844846,15863522155b0210b49ecdaf4c10d512:-1703565709,8746fdee041b0210197e4eb55f722d02:-1066844846,58b8e1573d0f4210e4d0257518815072:1000210078,d05e89d3b78b42109387e2dc90200b07:-736279649,4e4e09d3d18b42108b9e795e885d07ef:1000210078,b1164d1b934b4210841176a6c92abc94:-1558267491</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">d41cc5b7931f42100d6eb4897bba1083</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-16 15:01:17</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>2711328a7880446e864c411ed7d41b64</sys_id>
+        <sys_metadata>bd164d1b934b42100d6eb4897bba1092</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sp_instance_bd164d1b934b42100d6eb4897bba1092</sys_update_name>
+        <sys_update_version display_value="sp_instance_bd164d1b934b42100d6eb4897bba1092">553a0177931f42100d6eb4897bba10b6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-16 15:01:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

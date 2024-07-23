@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function c() {
+  var c = this;
+
+  // Pede os dados ao servidor
+  c.server.get().then(function(response) {
+    c.data.records = response.data.records;
+  });
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.titulo{&#13;
+text-align: center;&#13;
+margin-bottom: 0.5cm;&#13;
+color: white;&#13;
+background-color: #194E80;&#13;
+border: 2px solid white;&#13;
+&#13;
+}&#13;
+&#13;
+.card{&#13;
+border: 2px solid white;&#13;
+color: white;&#13;
+background-color: #0574DE;&#13;
+padding-left: 25px;&#13;
+border-radius: 0.3cm; &#13;
+margin-bottom: 20px;&#13;
+}&#13;
+&#13;
+&#13;
+.card-text {&#13;
+  max-height: 50px; /* Define a altura máxima da sinopse */&#13;
+  overflow-y: auto; /* Adiciona a barra de rolagem vertical se necessário */&#13;
+  text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */&#13;
+}&#13;
+&#13;
+.card-img-top {&#13;
+  max-height: 300px; /* Define a altura máxima da imagem do poster */&#13;
+  object-fit: cover; /* Ajusta a imagem para cobrir a área do cartão sem distorção */&#13;
+  display: block;&#13;
+  margin-left: auto;&#13;
+  margin-right: auto;&#13;
+}&#13;
+&#13;
+&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>exibir-dados-tabela</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>ExibirDadosTabela</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+  var tableName = 'x_908210_raposa_0_filmes';
+  
+  //GlideRecord
+  var gr = new GlideRecord(tableName);
+  gr.query();
+
+  var records = [];
+  while (gr.next()) {
+    records.push({
+      nome_do_filme : gr.getValue('nome_do_filme'),
+      sinopse: gr.getValue('sinopse'),
+	link: gr.getValue('link')
+    });
+  }
+
+  // Envia os dados para o cliente
+  data.records = records;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-18 12:18:32</sys_created_on>
+        <sys_id>d119f6d8932f06100d6eb4897bba102b</sys_id>
+        <sys_mod_count>101</sys_mod_count>
+        <sys_name>ExibirDadosTabela</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sp_widget_d119f6d8932f06100d6eb4897bba102b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-19 13:55:14</sys_updated_on>
+        <template><![CDATA[<div>
+  <h1 class="titulo">Filmes cadastrados</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" ng-repeat="record in c.data.records">
+      <div class="card mb-4 box-shadow">
+        <div class="card-body">
+          <div class="img-container">
+         <img class="card-img-top custom-img-size" src="{{record.link}}" alt="Imagem do Filme">
+                      </div>
+          <h4 class="card-title text-center"> {{record.nome_do_filme}}</h4>
+          <p class="card-text">Sinopse: {{record.sinopse}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

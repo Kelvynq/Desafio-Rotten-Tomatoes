@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">8465e9d43c53821032a794ee367e9e14</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"scoreSize":"lg","headingPosition":"top","sparklineStyle":"area","showScoreDate":false,"useRelativeScoreTime":false,"showScoreUpdateTime":false,"enableRealTimeUpdate":false,"showZero":true,"colorConfig":{"type":"singleColor","values":[{"color":"65b30222a9fe3dba00bac12449d0ea3b","metric":"ZEdGaWJHVjRYemt3T0RJeE1GOXlZWEJ2YzJGZk1GOW1hV3h0WlhNeE56SXdNakE1TkRBMU1ESXkxNzIwMjA5NDA1ODUx","rules":[]}]},"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Filmes","sourceType":"table","tableOrViewName":"x_908210_raposa_0_filmes","filterQuery":"","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzkwODIxMF9yYXBvc2FfMF9maWxtZXMxNzIwMjA5NDA1MDIy","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"wrapTitle":false,"showHeaderSeparator":false,"headerTitle":"Filmes cadastrados","showBorder":true,"bareBorder":false,"showDataPassthrough":false,"dataPassthrough":null,"metrics":[{"dataSource":"dGFibGV4XzkwODIxMF9yYXBvc2FfMF9maWxtZXMxNzIwMjA5NDA1MDIy","id":"ZEdGaWJHVjRYemt3T0RJeE1GOXlZWEJ2YzJGZk1GOW1hV3h0WlhNeE56SXdNakE1TkRBMU1ESXkxNzIwMjA5NDA1ODUx","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":null,"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableDrilldown":true,"showMaximumRange":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":false,"period":"M","dateFormat":"default","hideMatrixAggregate":false,"newReporting":false,"configVersion":"23.0.0-ci-SNAPSHOT","filterConfigurations":[],"componentId":"bwd9i1kb","noDebounce":"","showDateRangeByDefault":false,"allowChangeDateRange":false,"selectedElements":[],"scoreIcon":""}</component_props>
+        <h>10</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 19:53:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cc65e9d409538210315125b68f025411</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>par_dashboard_widget_cc65e9d409538210315125b68f025411</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 20:17:01</sys_updated_on>
+        <visualization/>
+        <w>16</w>
+        <widget_props/>
+        <x>0</x>
+        <y>4</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>par_dashboard_widget_cc65e9d409538210315125b68f025411</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">8465e9d43c53821032a794ee367e9e14</canvas><component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component><component_props>{"scoreSize":"lg","headingPosition":"top","sparklineStyle":"area","showScoreDate":false,"useRelativeScoreTime":false,"showScoreUpdateTime":false,"enableRealTimeUpdate":false,"showZero":true,"colorConfig":{"type":"singleColor","values":[{"color":"65b30222a9fe3dba00bac12449d0ea3b","metric":"ZEdGaWJHVjRYemt3T0RJeE1GOXlZWEJ2YzJGZk1GOW1hV3h0WlhNeE56SXdNakE1TkRBMU1ESXkxNzIwMjA5NDA1ODUx","rules":[]}]},"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Filmes","sourceType":"table","tableOrViewName":"x_908210_raposa_0_filmes","filterQuery":"","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzkwODIxMF9yYXBvc2FfMF9maWxtZXMxNzIwMjA5NDA1MDIy","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"wrapTitle":false,"showHeaderSeparator":false,"headerTitle":"Filmes cadastrados","showBorder":true,"bareBorder":false,"showDataPassthrough":false,"dataPassthrough":null,"metrics":[{"dataSource":"dGFibGV4XzkwODIxMF9yYXBvc2FfMF9maWxtZXMxNzIwMjA5NDA1MDIy","id":"ZEdGaWJHVjRYemt3T0RJeE1GOXlZWEJ2YzJGZk1GOW1hV3h0WlhNeE56SXdNakE1TkRBMU1ESXkxNzIwMjA5NDA1ODUx","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":null,"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableDrilldown":true,"showMaximumRange":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":false,"period":"M","dateFormat":"default","hideMatrixAggregate":false,"newReporting":false,"configVersion":"23.0.0-ci-SNAPSHOT","filterConfigurations":[],"componentId":"bwd9i1kb","noDebounce":"","showDateRangeByDefault":false,"allowChangeDateRange":false,"selectedElements":[],"scoreIcon":""}</component_props><h>10</h><name/><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-05 19:53:10</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>cc65e9d409538210315125b68f025411</sys_id><sys_mod_count>3</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>par_dashboard_widget_cc65e9d409538210315125b68f025411</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-05 20:17:01</sys_updated_on><visualization/><w>16</w><widget_props/><x>0</x><y>4</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>182583871</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-05 20:17:01</sys_created_on>
+        <sys_id>25da21dc935382100d6eb4897bba10ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>190848b039a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-05 20:17:01</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>e9da21dcbe538210ea54342ecdfd91c9</update_guid>
+        <update_guid_history>e9da21dcbe538210ea54342ecdfd91c9:182583871,1127e1988a53821068ee7e6e1ac27442:-1264650778,1d652dd494538210cbe275825c993882:1786426419,91652dd4a9538210c686b96d3c1acf81:1906622748</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">9d21385a93d382100d6eb4897bba10b8</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 21:12:47</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>164a36a94fe94d90844945d044b11c04</sys_id>
+        <sys_metadata>cc65e9d409538210315125b68f025411</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_cc65e9d409538210315125b68f025411</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_cc65e9d409538210315125b68f025411">25da21dc935382100d6eb4897bba10ca</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 21:12:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="DELETE">
+        <sc_cat_item display_value="Cadastro de filmes">ce265c31934302100d6eb4897bba1051</sc_cat_item>
+        <sc_catalog display_value="Technical Catalog">742ce428d7211100f2d224837e61036d</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 17:49:28</sys_created_on>
+        <sys_id>61b2a80f938302100d6eb4897bba10fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Catalog.Cadastro de filmes</sys_name>
+        <sys_package display_value="Raposa Aí Reviews" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Aí Reviews">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_61b2a80f938302100d6eb4897bba10fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 17:49:28</sys_updated_on>
+    </sc_cat_item_catalog>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</application>
+        <file_path/>
+        <instance_id>8e3846e8db9ab958ebdd2a5913961923</instance_id>
+        <instance_name>dev200019</instance_name>
+        <name>sc_cat_item_catalog_61b2a80f938302100d6eb4897bba10fd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog"><sc_cat_item_catalog action="INSERT_OR_UPDATE"><sc_cat_item display_value="Cadastro de filmes">ce265c31934302100d6eb4897bba1051</sc_cat_item><sc_catalog display_value="Technical Catalog">742ce428d7211100f2d224837e61036d</sc_catalog><sys_class_name>sc_cat_item_catalog</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-07-01 17:49:28</sys_created_on><sys_id>61b2a80f938302100d6eb4897bba10fd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Technical Catalog.Cadastro de filmes</sys_name><sys_package display_value="Raposa Aí Reviews" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package><sys_policy/><sys_scope display_value="Raposa Aí Reviews">b96e80b5930302100d6eb4897bba1042</sys_scope><sys_update_name>sc_cat_item_catalog_61b2a80f938302100d6eb4897bba10fd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-07-01 17:49:28</sys_updated_on></sc_cat_item_catalog></record_update>]]></payload>
+        <payload_hash>1787989813</payload_hash>
+        <record_name>Technical Catalog.Cadastro de filmes</record_name>
+        <reverted_from/>
+        <source>b56e80b5930302100d6eb4897bba1046</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 17:49:28</sys_created_on>
+        <sys_id>29b2e80f938302100d6eb4897bba1000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1906f6a7d0b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 17:49:28</sys_updated_on>
+        <type>Catalog Items Catalog</type>
+        <update_guid>2db2a80fe38302101fb515a16651e1ff</update_guid>
+        <update_guid_history>2db2a80fe38302101fb515a16651e1ff:1787989813</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Technical Catalog.Cadastro de filmes">f383648f938302100d6eb4897bba10de</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-01 17:53:10</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
+        <sys_id>2da1f1db113c47f39dd05fb7840d0cc1</sys_id>
+        <sys_metadata>61b2a80f938302100d6eb4897bba10fd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Technical Catalog.Cadastro de filmes</sys_name>
+        <sys_package display_value="Raposa Carrossel" source="x_908210_raposa_0">b96e80b5930302100d6eb4897bba1042</sys_package>
+        <sys_parent display_value="Cadastro de filmes">ce265c31934302100d6eb4897bba1051</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Raposa Carrossel">b96e80b5930302100d6eb4897bba1042</sys_scope>
+        <sys_scope_delete display_value="">9841d081eb184cd4808365f1622e3c24</sys_scope_delete>
+        <sys_update_name>sc_cat_item_catalog_61b2a80f938302100d6eb4897bba10fd</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_catalog_61b2a80f938302100d6eb4897bba10fd">29b2e80f938302100d6eb4897bba1000</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-01 17:53:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
